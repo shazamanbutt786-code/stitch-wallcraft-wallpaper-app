@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_SVG_START:ANIMATION_68 class="fixed inset-0 w-full h-full" --><div class="fixed inset-0 w-full h-full" id="animated-svg-ANIMATION_68" style="display:block;"><svg fill="none" height="100%" viewbox="0 0 400 400" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Background & Ambient Radial Glows -->
+<radialgradient cx="50%" cy="50%" id="centerCoreGlow" r="50%">
+<stop offset="0%" stop-color="#7C5CFC" stop-opacity="0.6"></stop>
+<stop offset="50%" stop-color="#38BDF8" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#0B0C10" stop-opacity="0"></stop>
+</radialgradient>
+<!-- Neon Crystal Gradient Facets -->
+<lineargradient id="facetTop" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FFFFFF"></stop>
+<stop offset="40%" stop-color="#C084FC"></stop>
+<stop offset="100%" stop-color="#7C5CFC"></stop>
+</lineargradient>
+<lineargradient id="facetCyan" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#67E8F9"></stop>
+<stop offset="60%" stop-color="#38BDF8"></stop>
+<stop offset="100%" stop-color="#4F46E5"></stop>
+</lineargradient>
+<lineargradient id="facetViolet" x1="100%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#E879F9"></stop>
+<stop offset="50%" stop-color="#9333EA"></stop>
+<stop offset="100%" stop-color="#312E81"></stop>
+</lineargradient>
+<!-- Ring Track Gradient -->
+<lineargradient id="ringGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#7C5CFC"></stop>
+<stop offset="50%" stop-color="#38BDF8"></stop>
+<stop offset="100%" stop-color="#2DD4BF"></stop>
+</lineargradient>
+<!-- Filters for Bloom & Glow -->
+<filter height="180%" id="bloomFilter" width="180%" x="-40%" y="-40%">
+<fegaussianblur result="blur1" stddeviation="8"></fegaussianblur>
+<fegaussianblur result="blur2" stddeviation="18"></fegaussianblur>
+<femerge>
+<femergenode in="blur2"></femergenode>
+<femergenode in="blur1"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<filter height="140%" id="subtleGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<style>
+      @keyframes spinClockwise {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes spinCounterClockwise {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+      }
+      @keyframes pulseCore {
+        0%, 100% { transform: scale(0.92); opacity: 0.7; }
+        50% { transform: scale(1.12); opacity: 1; }
+      }
+      @keyframes levitateCrystal {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(3deg); }
+      }
+      @keyframes dashProgress {
+        0% { stroke-dashoffset: 750; }
+        50% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 750; }
+      }
+      @keyframes orbitParticle1 {
+        0% { transform: rotate(0deg) translateX(95px) rotate(0deg) scale(0.8); opacity: 0.3; }
+        50% { opacity: 1; transform: rotate(180deg) translateX(95px) rotate(-180deg) scale(1.3); }
+        100% { transform: rotate(360deg) translateX(95px) rotate(-360deg) scale(0.8); opacity: 0.3; }
+      }
+      @keyframes orbitParticle2 {
+        0% { transform: rotate(120deg) translateX(120px) rotate(-120deg) scale(1.1); opacity: 0.8; }
+        50% { opacity: 0.3; transform: rotate(300deg) translateX(120px) rotate(-300deg) scale(0.6); }
+        100% { transform: rotate(480deg) translateX(120px) rotate(-480deg) scale(1.1); opacity: 0.8; }
+      }
+      @keyframes orbitParticle3 {
+        0% { transform: rotate(240deg) translateX(75px) rotate(-240deg); opacity: 0.5; }
+        50% { opacity: 1; transform: rotate(420deg) translateX(85px) rotate(-420deg); }
+        100% { transform: rotate(600deg) translateX(75px) rotate(-600deg); opacity: 0.5; }
+      }
+      @keyframes shimmerGlint {
+        0%, 100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
+        50% { opacity: 1; transform: scale(1.25) rotate(45deg); }
+      }
+
+      .spin-slow {
+        transform-origin: 200px 200px;
+        animation: spinClockwise 12s linear infinite;
+      }
+      .spin-counter {
+        transform-origin: 200px 200px;
+        animation: spinCounterClockwise 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .spin-ring {
+        transform-origin: 200px 200px;
+        animation: spinClockwise 2.8s linear infinite;
+      }
+      .dash-anim {
+        stroke-dasharray: 620;
+        animation: dashProgress 3.4s ease-in-out infinite;
+      }
+      .core-pulse {
+        transform-origin: 200px 200px;
+        animation: pulseCore 2.5s ease-in-out infinite;
+      }
+      .crystal-float {
+        transform-origin: 200px 200px;
+        animation: levitateCrystal 3s ease-in-out infinite;
+      }
+      .particle-1 {
+        transform-origin: 200px 200px;
+        animation: orbitParticle1 4s linear infinite;
+      }
+      .particle-2 {
+        transform-origin: 200px 200px;
+        animation: orbitParticle2 6s linear infinite;
+      }
+      .particle-3 {
+        transform-origin: 200px 200px;
+        animation: orbitParticle3 3.2s linear infinite;
+      }
+      .glint {
+        transform-origin: 200px 185px;
+        animation: shimmerGlint 2s ease-in-out infinite;
+      }
+    </style>
+</defs>
+<!-- Deep Ambient Glow Base -->
+<circle class="core-pulse" cx="200" cy="200" fill="url(#centerCoreGlow)" r="140"></circle>
+<!-- Outer Orbit Tech Ring (Subtle Track) -->
+<circle cx="200" cy="200" r="130" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3 6" stroke-width="1.5"></circle>
+<!-- Outer Segmented Tech Ring with Rotation -->
+<g class="spin-slow">
+<circle cx="200" cy="200" r="120" stroke="rgba(124, 92, 252, 0.3)" stroke-dasharray="24 40 8 40" stroke-width="2"></circle>
+<circle cx="200" cy="80" fill="#38BDF8" r="2.5"></circle>
+<circle cx="200" cy="320" fill="#7C5CFC" r="2.5"></circle>
+<circle cx="80" cy="200" fill="#2DD4BF" r="2.5"></circle>
+<circle cx="320" cy="200" fill="#C084FC" r="2.5"></circle>
+</g>
+<!-- Middle Counter-Rotating Celestial Compass -->
+<g class="spin-counter">
+<circle cx="200" cy="200" r="95" stroke="rgba(56, 189, 248, 0.25)" stroke-dasharray="14 18" stroke-width="1.5"></circle>
+<!-- Compass Notch Ticks -->
+<line stroke="#38BDF8" stroke-width="2" x1="200" x2="200" y1="102" y2="108"></line>
+<line stroke="#38BDF8" stroke-width="2" x1="200" x2="200" y1="292" y2="298"></line>
+<line stroke="#7C5CFC" stroke-width="2" x1="102" x2="108" y1="200" y2="200"></line>
+<line stroke="#7C5CFC" stroke-width="2" x1="292" x2="298" y1="200" y2="200"></line>
+</g>
+<!-- Main Active Glowing Progress Arc -->
+<g class="spin-ring" filter="url(#bloomFilter)">
+<circle class="dash-anim" cx="200" cy="200" r="105" stroke="url(#ringGrad)" stroke-linecap="round" stroke-width="4.5"></circle>
+</g>
+<!-- Orbiting Luminous Quantum Spark Particles -->
+<circle class="particle-1" cx="200" cy="200" fill="#67E8F9" filter="url(#bloomFilter)" r="4.5"></circle>
+<circle class="particle-2" cx="200" cy="200" fill="#C084FC" filter="url(#bloomFilter)" r="3.5"></circle>
+<polygon class="particle-3" fill="#2DD4BF" filter="url(#subtleGlow)" points="200,196 203,200 200,204 197,200"></polygon>
+<!-- Central Floating WallCraft Faceted Crystal -->
+<g class="crystal-float" filter="url(#bloomFilter)">
+<g transform="translate(162, 145) scale(0.75)">
+<!-- Crystal Silhouette Shadow -->
+<polygon fill="#131525" points="52,4 88,36 78,82 52,106 26,82 16,36" stroke="rgba(255,255,255,0.25)" stroke-linejoin="round" stroke-width="1.5"></polygon>
+<!-- Top Crown Facet -->
+<polygon fill="url(#facetTop)" points="52,4 74,28 30,28"></polygon>
+<!-- Upper Left Prism -->
+<polygon fill="url(#facetCyan)" points="16,36 30,28 52,48 24,60"></polygon>
+<!-- Upper Right Prism -->
+<polygon fill="url(#facetViolet)" points="88,36 74,28 52,48 80,60"></polygon>
+<!-- Radiant Diamond Core -->
+<polygon fill="url(#facetTop)" opacity="0.95" points="52,28 72,48 52,78 32,48"></polygon>
+<!-- Lower Left Prism -->
+<polygon fill="url(#facetCyan)" points="24,60 52,78 52,106 26,82"></polygon>
+<!-- Lower Right Prism -->
+<polygon fill="url(#facetViolet)" points="80,60 52,78 52,106 78,82"></polygon>
+<!-- Highlight Refraction Beams -->
+<polyline points="52,4 52,28 32,48 52,78 52,106" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-width="1.2"></polyline>
+<polyline points="52,28 72,48 52,78" stroke="rgba(255,255,255,0.5)" stroke-linecap="round" stroke-width="1.2"></polyline>
+<line stroke="rgba(255,255,255,0.6)" stroke-width="1.2" x1="30" x2="74" y1="28" y2="28"></line>
+</g>
+</g>
+<!-- Central Prismatic Core Starburst Glint -->
+<g class="glint" filter="url(#subtleGlow)">
+<polygon fill="#FFFFFF" points="200,175 203,183 211,185 203,187 200,195 197,187 189,185 197,183"></polygon>
+<circle cx="200" cy="185" fill="#67E8F9" r="2"></circle>
+</g>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_68 -->
+</body>
+</html>

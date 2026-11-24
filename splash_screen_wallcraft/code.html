@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>WallCraft Splash Screen</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              purple: '#7C5CFC',
+              lilac: '#A78BFA',
+              cyan: '#38BDF8',
+              teal: '#2DD4BF',
+              dark: '#0B0D14',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.08); }
+    }
+    @keyframes floatCrystal {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+    @keyframes orbitRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes sparkleGlint {
+      0%, 100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+    }
+    @keyframes progressScan {
+      0% { width: 0%; opacity: 0.5; }
+      50% { width: 68%; opacity: 1; }
+      100% { width: 100%; opacity: 0.9; }
+    }
+
+    .pulse-glow {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+    .float-crystal {
+      animation: floatCrystal 4.5s ease-in-out infinite;
+    }
+    .orbit-ring {
+      animation: orbitRotate 18s linear infinite;
+    }
+    .orbit-reverse {
+      animation: orbitRotate 12s linear infinite reverse;
+    }
+    .sparkle-anim {
+      animation: sparkleGlint 2.8s ease-in-out infinite;
+    }
+    .load-bar {
+      animation: progressScan 2.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#08090E] text-white antialiased font-sans flex items-center justify-center min-h-screen select-none overflow-hidden m-0 p-0">
+
+  <!-- Mobile Screen Container -->
+  <div class="relative w-full max-w-[412px] h-[892px] max-h-screen bg-[#090A10] flex flex-col justify-between overflow-hidden shadow-2xl border border-white/5 sm:rounded-[44px]">
+
+    <!-- Background Ambient Lighting & Cyber Mesh Grid -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- Top Radial Ambiance -->
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[380px] h-[380px] rounded-full bg-gradient-to-b from-[#7C5CFC]/20 via-[#38BDF8]/10 to-transparent blur-3xl pulse-glow"></div>
+      
+      <!-- Central Gem Core Glow -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full bg-[#7C5CFC]/15 blur-[90px] pulse-glow"></div>
+      
+      <!-- Bottom Subtle Glow -->
+      <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[340px] h-[260px] rounded-full bg-[#38BDF8]/10 blur-3xl"></div>
+
+      <!-- Fine Grid Lines -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-40"></div>
+
+      <!-- Floating Micro Stars / Dust -->
+      <div class="absolute top-[22%] left-[18%] w-1.5 h-1.5 rounded-full bg-[#67E8F9] shadow-[0_0_8px_#38BDF8] animate-pulse"></div>
+      <div class="absolute top-[36%] right-[20%] w-1 h-1 rounded-full bg-[#C084FC] shadow-[0_0_6px_#A78BFA] animate-ping"></div>
+      <div class="absolute top-[68%] left-[24%] w-1 h-1 rounded-full bg-[#38BDF8] opacity-60"></div>
+      <div class="absolute top-[75%] right-[22%] w-1.5 h-1.5 rounded-full bg-[#7C5CFC] shadow-[0_0_8px_#7C5CFC]"></div>
+    </div>
+
+    <!-- Top Status Bar Area & Telemetry -->
+    <div class="relative z-10 pt-4 px-7 flex items-center justify-between text-xs font-display tracking-wider text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34D399]"></span>
+        <span class="text-[11px] font-semibold tracking-widest text-slate-300 uppercase">Engine Online</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
+        <span class="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/10 text-slate-300">v2.4.0</span>
+        <span class="px-1.5 py-0.5 rounded-md bg-[#7C5CFC]/20 text-[#A78BFA] border border-[#7C5CFC]/30 text-[10px] font-bold">OLED 4K</span>
+      </div>
+    </div>
+
+    <!-- Center Hero Section: Emblem, Rings, Typography & Tagline -->
+    <div class="relative z-10 flex flex-col items-center justify-center my-auto px-6 text-center">
+
+      <!-- Dynamic Brand Emblem with Orbital Rings -->
+      <div class="relative flex items-center justify-center w-64 h-64 mb-6">
+        
+        <!-- Outer Orbital Dashed Ring -->
+        <svg class="absolute inset-0 w-full h-full orbit-ring opacity-35" viewBox="0 0 256 256" fill="none">
+          <circle cx="128" cy="128" r="114" stroke="#7C5CFC" stroke-width="1.2" stroke-dasharray="8 12" stroke-linecap="round"/>
+          <circle cx="128" cy="14" r="3" fill="#38BDF8" filter="drop-shadow(0 0 4px #38BDF8)"/>
+          <circle cx="242" cy="128" r="2.5" fill="#C084FC" filter="drop-shadow(0 0 4px #C084FC)"/>
+          <circle cx="14" cy="128" r="2.5" fill="#2DD4BF"/>
+        </svg>
+
+        <!-- Inner Reverse Tech Ring -->
+        <svg class="absolute inset-0 w-full h-full orbit-reverse opacity-25" viewBox="0 0 256 256" fill="none">
+          <circle cx="128" cy="128" r="86" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="24 36 6 36"/>
+          <circle cx="128" cy="42" r="2" fill="#FFFFFF"/>
+          <circle cx="128" cy="214" r="2" fill="#7C5CFC"/>
+        </svg>
+
+        <!-- Luminous Glow Halo behind the crystal -->
+        <div class="absolute w-36 h-36 rounded-full bg-gradient-to-tr from-[#7C5CFC]/40 via-[#38BDF8]/30 to-[#A78BFA]/30 blur-xl"></div>
+
+        <!-- Floating Faceted 3D Crystal Gem Emblem -->
+        <div class="float-crystal relative z-10 w-32 h-32 flex items-center justify-center drop-shadow-[0_16px_36px_rgba(124,92,252,0.45)]">
+          <svg class="w-full h-full" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gemTop" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="40%" stop-color="#DDD6FE"/>
+                <stop offset="100%" stop-color="#8B5CF6"/>
+              </linearGradient>
+              <linearGradient id="gemCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#67E8F9"/>
+                <stop offset="45%" stop-color="#38BDF8"/>
+                <stop offset="100%" stop-color="#4F46E5"/>
+              </linearGradient>
+              <linearGradient id="gemViolet" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E879F9"/>
+                <stop offset="50%" stop-color="#9333EA"/>
+                <stop offset="100%" stop-color="#312E81"/>
+              </linearGradient>
+              <linearGradient id="gemDeep" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="#6366F1"/>
+                <stop offset="100%" stop-color="#1E1B4B"/>
+              </linearGradient>
+              <filter id="crystalBloom" x="-25%" y="-25%" width="150%" height="150%">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Base Dark Facet Shadow -->
+            <polygon points="60,6 100,42 88,94 60,114 32,94 20,42" fill="#131526" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+
+            <!-- Top Crown Prism -->
+            <polygon points="60,6 82,32 38,32" fill="url(#gemTop)"/>
+
+            <!-- Upper Left Prism -->
+            <polygon points="20,42 38,32 60,52 28,66" fill="url(#gemCyan)"/>
+
+            <!-- Upper Right Prism -->
+            <polygon points="100,42 82,32 60,52 92,66" fill="url(#gemViolet)"/>
+
+            <!-- Central Brilliant Diamond Facet -->
+            <polygon points="60,32 80,52 60,84 40,52" fill="url(#gemTop)" opacity="0.95"/>
+
+            <!-- Lower Left Chiseled Shard -->
+            <polygon points="28,66 60,84 60,114 32,94" fill="url(#gemCyan)"/>
+
+            <!-- Lower Right Chiseled Shard -->
+            <polygon points="92,66 60,84 60,114 88,94" fill="url(#gemDeep)"/>
+
+            <!-- Internal Crisp Light Refraction Bevels -->
+            <polyline points="60,6 60,32 40,52 60,84 60,114" stroke="rgba(255,255,255,0.65)" stroke-width="1.2" stroke-linecap="round"/>
+            <polyline points="60,32 80,52 60,84" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="38" y1="32" x2="82" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+
+            <!-- Refractive Diamond Star Burst -->
+            <g class="sparkle-anim" transform="translate(60, 42)">
+              <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#FFFFFF"/>
+              <circle cx="0" cy="0" r="2.5" fill="#67E8F9"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- App Title Typography -->
+      <div class="flex items-center justify-center space-x-1.5 mb-2.5">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white font-sans drop-shadow-[0_4px_16px_rgba(255,255,255,0.15)]">
+          Wall<span class="bg-gradient-to-r from-[#A78BFA] via-[#7C5CFC] to-[#38BDF8] bg-clip-text text-transparent">Craft</span>
+        </h1>
+      </div>
+
+      <!-- Tagline & Description -->
+      <p class="font-display text-xs sm:text-[13px] font-semibold tracking-[0.28em] text-slate-300 uppercase mb-4 drop-shadow">
+        Ultra 4K &amp; AI Wallpapers
+      </p>
+
+      <!-- Sub-Pill Characteristic Highlights -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+        <span class="flex items-center gap-1.5 text-[11px] font-medium text-slate-300">
+          <svg class="w-3.5 h-3.5 text-[#38BDF8]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+          </svg>
+          Neural Latent Engine
+        </span>
+        <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+        <span class="text-[11px] font-medium text-purple-300">Infinite Depth</span>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Loading State & Brand Certification -->
+    <div class="relative z-10 px-8 pb-10 flex flex-col items-center w-full">
+      
+      <!-- High-Tech Shimmering Progress Bar -->
+      <div class="w-full max-w-[260px] flex flex-col items-center gap-2.5 mb-6">
+        <div class="relative w-full h-1.5 bg-white/[0.08] rounded-full overflow-hidden p-[1px] border border-white/10 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6)]">
+          <!-- Animated Progress Fill -->
+          <div class="load-bar h-full rounded-full bg-gradient-to-r from-[#7C5CFC] via-[#38BDF8] to-[#2DD4BF] shadow-[0_0_12px_#38BDF8]"></div>
+        </div>
+        
+        <div class="flex items-center justify-between w-full text-[10px] font-display text-slate-400 font-medium tracking-wider">
+          <span class="flex items-center gap-1 text-slate-400">
+            <svg class="w-2.5 h-2.5 text-[#38BDF8] animate-spin" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" stroke-opacity="0.25"></circle>
+              <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Loading shaders...
+          </span>
+          <span class="text-slate-300 font-semibold tracking-widest">100% READY</span>
+        </div>
+      </div>
+
+      <!-- Micro Brand Signature / Copyright -->
+      <div class="flex flex-col items-center gap-1.5 text-center">
+        <div class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-[#7C5CFC]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 2.18l7 3.89v4.93c0 4.54-3.08 8.79-7 9.92-3.92-1.13-7-5.38-7-9.92V8.07l7-3.89z"/>
+          </svg>
+          <span class="text-[11px] tracking-wide text-slate-400 font-medium">Breeze AI Experience &bull; Studio Edition</span>
+        </div>
+        <p class="text-[10px] text-slate-400 font-display tracking-widest uppercase">
+          Crafted for high-refresh OLED displays
+        </p>
+      </div>
+
+      <!-- iOS Style Home Indicator Bar -->
+      <div class="w-32 h-1 bg-white/20 rounded-full mt-6"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

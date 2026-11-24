@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#4412d1", "inverse-surface": "#2f3133", "primary-fixed-dim": "#c8bfff", "surface-bright": "#f9f9fc", "on-primary": "#ffffff", "on-surface-variant": "#484555", "surface-tint": "#5c3be8", "on-secondary-fixed": "#341100", "on-primary-fixed": "#1a0063", "tertiary-container": "#157d44", "surface-variant": "#e2e2e5", "secondary-fixed": "#ffdbcb", "error": "#ba1a1a", "primary-fixed": "#e5deff", "on-tertiary": "#ffffff", "primary-container": "#6b4df7", "error-container": "#ffdad6", "tertiary": "#006232", "outline-variant": "#c9c4d8", "surface-container-low": "#f3f3f6", "on-secondary-container": "#742e00", "on-tertiary-fixed-variant": "#005229", "on-secondary-fixed-variant": "#793100", "surface-dim": "#dadadc", "inverse-on-surface": "#f0f0f3", "tertiary-fixed": "#97f7b1", "on-tertiary-container": "#bfffcc", "secondary": "#994614", "primary": "#522dde", "on-error": "#ffffff", "surface-container-high": "#e8e8ea", "on-error-container": "#93000a", "surface": "#f9f9fc", "surface-container": "#eeeef0", "background": "#f9f9fc", "on-tertiary-fixed": "#00210d", "tertiary-fixed-dim": "#7cda96", "on-secondary": "#ffffff", "on-surface": "#1a1c1e", "on-primary-container": "#f2edff", "surface-container-highest": "#e2e2e5", "inverse-primary": "#c8bfff", "on-background": "#1a1c1e", "surface-container-lowest": "#ffffff", "outline": "#787587", "secondary-container": "#ff955d", "secondary-fixed-dim": "#ffb691" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xs": "0.25rem", "space-2xl": "3rem", "margin": "1.25rem", "margin-lg": "2.5rem", "margin-sm": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "space-lg": "1.5rem", "space-xl": "2rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="WallCraft Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAIAWmr6XIZAqDkwKZWyAJIY6ekynQvyp-A1OAlavT9xoZHMiMLq197M87AmL6QL1_6WZeuligdNgD7gU1B2UivN1vOvi2EfQnuG0L9FlbPh8uyK065oJVVw58Z1mqpbxeANLlAC9qKuMRZMPdedvSQP27UniJP13PbKJp_UKLHUluYTUBBJTPWIlWuria70KXkKnn3F0AysjnA4kYyHmHiFx6iuOP0QrNCOIt_WcE5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">WallCraft</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Categories</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Account" class="w-11 h-11 flex items-center justify-center rounded-full hover:ring-2 hover:ring-primary/20 transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMBpyAYtdX1fIKYHnOTYxHjA5HK1CuJ3_Jd5k9VXSAgpCcC_PfARZ_XjJRUEXGVrYG6bApj0RBeGjutWXKBdd9VInQ5GfRzlIYmEdvNA35s9x0ZrMTeMv49emhn0Vr1MifVPmVs72e9ZlK0O7EMULr5dERssa5kXOtuRCDGbZn7nSaCMrXNQ8qsZkYOebswA-ygqqjZpOWaYgDrPEp5sA0zOlYgdEV_md2Q4jPY4"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full pb-8">
+<!-- Search & Filter Bar Section -->
+<section class="px-margin pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 flex items-center h-12 bg-surface-container-low rounded-full px-space-md shadow-sm transition-all focus-within:bg-surface-container-lowest focus-within:shadow-md">
+<span class="material-symbols-outlined text-outline text-[20px] mr-space-xs shrink-0 select-none">search</span>
+<input aria-label="Search styles, colors, and themes" class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search styles, colors, and themes" type="text"/>
+<button aria-label="Voice search" class="text-outline hover:text-primary transition-colors shrink-0 p-1 flex items-center" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<!-- Filter button with active count badge (3) -->
+<button aria-label="Open filters, 3 active" class="h-12 px-space-md rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center gap-1.5 shadow-sm active:scale-95 transition-all select-none shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-label-md text-label-md text-primary font-bold">3</span>
+</button>
+</div>
+</section>
+<!-- Curated Collections Horizontal Carousel -->
+<section class="flex flex-col gap-space-xs pt-space-xs pb-space-md">
+<div class="flex items-center justify-between px-margin">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Curated Collections</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-0.5" href="#">
+        View All
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Snap Scroll Strip -->
+<div class="flex overflow-x-auto gap-space-md px-margin no-scrollbar py-space-xs snap-x snap-mandatory">
+<!-- Card 1: OLED Pure Black -->
+<div class="snap-start shrink-0 w-64 rounded-xl overflow-hidden relative shadow-md bg-surface-container-lowest group cursor-pointer">
+<div class="w-full h-36 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Deep pitch black minimalist wallpaper with subtle electric purple and violet neon edge lighting reflecting off glossy dark liquid obsidian geometry, 8k resolution, OLED friendly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcgY9EesQ87XKML-t2GJ8IEJhJZUcjb3FjjYsxg26_OhABmCFY04u7msLob18Ix7F9OZ_I0ay1Ohdq75h4g1vhIzh1jiIWZMSiojGge4oXtgXssEBWiqJXZUrxxGwpG2UN-kfTrUXtiAJcBC7bL_PvPntkmzxZ6aELVt7kTS_3IpC0sif60UYxbANKaCK_cvDtMDkVYWNLT1xyUEZeSwybJxwh5te7GZ7yT1mdQ9s')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20"></div>
+</div>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-white font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary-container">workspace_premium</span> Pro
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 text-white flex flex-col pointer-events-none">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm">OLED Pure Black</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-medium opacity-90">Zero battery drain</p>
+</div>
+</div>
+<!-- Card 2: AI Generative -->
+<div class="snap-start shrink-0 w-64 rounded-xl overflow-hidden relative shadow-md bg-surface-container-lowest group cursor-pointer">
+<div class="w-full h-36 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic luminous surreal dreamscape with iridescent fluid crystalline structures, floating neon violet particles, ethereal digital generative artwork, crisp volumetric lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeQp4hlqZZo7MG8a6VuuozH8I9skXt6rzEHjl0Le3nzVjbfe7wYxfTeviP_cPQdjKDdUeDNHIaczDQ5W6ukFB7yS1QITTYs3n094nLQ-H4GE321yvA5EROBaUxQovxigN4b3sQ3NulwXH-lMiedxB0_ZLtqZ-_XuGdhGCLqKpucoflD3u6klontVszj8s2Eri0FNxA6SkmR6Rdr8O5yUESb70EgvxAwMgca_aUg9E')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20"></div>
+</div>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/80 backdrop-blur-md text-white font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span> New
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 text-white flex flex-col pointer-events-none">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm">AI Generative</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-medium opacity-90">Prompt crafted art</p>
+</div>
+</div>
+<!-- Card 3: Studio Ghibli Vibe -->
+<div class="snap-start shrink-0 w-64 rounded-xl overflow-hidden relative shadow-md bg-surface-container-lowest group cursor-pointer">
+<div class="w-full h-36 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Hand painted anime aesthetic summer landscape, fluffy cumulus clouds in bright sapphire blue sky, lush rolling emerald hills, warm nostalgic golden sunlight Studio Ghibli style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy5R5g9xZWb1pIh8VIyTvSiEjbbtWhikta3lecGXvQEhGz5rhnSr3Glo8UJq-scJJ5VhC5Qxe-8c5i8holM-yecBWDLo9Mwmskgn-n0uw7tEXDTRYafkHySU7r-MYJDMyAajH5ZnALEL0Q4cXR5WusMQC9udsb0Kehrq3qbeVexdCrFotNqwijXiQRoy4KOYTllQLLwepv6Rq3TU7HYDwx0JyNN3VK7S57xH10wcU')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20"></div>
+</div>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/90 backdrop-blur-md text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[12px]">local_fire_department</span> Trending
+          </span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 text-white flex flex-col pointer-events-none">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm">Studio Ghibli Vibe</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-medium opacity-90">Hand painted scenery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Chips Horizontal Scrolling Navigation -->
+<section class="pb-space-sm">
+<div aria-label="Wallpaper categories" class="flex overflow-x-auto gap-space-xs px-margin no-scrollbar py-1" role="tablist">
+<button class="filter-chip h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md shrink-0 shadow-md shadow-primary/20 flex items-center transition-all select-none" type="button">
+        All Styles
+      </button>
+<button class="filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none" type="button">
+        Cyberpunk
+      </button>
+<button class="filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none" type="button">
+        Nature
+      </button>
+<button class="filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none" type="button">
+        Minimalist
+      </button>
+<button class="filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none" type="button">
+        Abstract
+      </button>
+<button class="filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none" type="button">
+        Architecture
+      </button>
+</div>
+</section>
+<!-- 2-Column Styles & Themes Wallpaper Grid -->
+<section class="px-margin pt-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Styles &amp; Themes</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold">16 Categories</span>
+</div>
+<button aria-label="Sort grid" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+</button>
+</div>
+<!-- High-ratio 9:16 mobile wallpaper preview cards in 2 columns -->
+<div class="grid grid-cols-2 gap-gutter-sm">
+<!-- 1. Cyberpunk Metropolis -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Drenching rain slicked futuristic cyberpunk city street with vibrant violet, neon cyan, and magenta holographic signs reflecting on wet asphalt, atmospheric steam and towering skyscrapers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjcGSnBiI-2pJhtcO-YF67iP0pfQtyeSsIOcJFEcUjrk1c9s_YMmfEmRpJ-q1BaEioPfg_RkEYxnxOWK7GvYAsZez2ryQ_93N9UZpr16laewet4IHRfUeHQPURQg1fM4YffpNvHw5I36EgFoo2QUOQ56e6W1a0b3bYzAvMCxCnJCuWRS5UZHFR4RDUyuUGWLQF64Offc_OzWXomqNlJxol6npZQ_DBwB4LHxbECo8')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Cyberpunk Metropolis</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Neon cityscapes and rain slickers</p>
+</div>
+</div>
+<!-- 2. Ethereal Nebula -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Vast deep space celestial nebula with interstellar violet dust clouds, gleaming cyan star clusters, cosmos radiance, hyper-detailed astronomy photography style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYzURsBqkE7QUTbo0pfhrpO-pYgTbfcxD-re5OmL2GMkX084YLdbYUDtJdDfa9h3Tz0OPQQt7txYuZYSyUCDxx_fTgaU0Mf580PJo4C0Pjvomg3a_OWV8oL5zaaVI9UV9GyAssyyoVQH1tbq3rIQWcOQR-2IPZdgI4KA7m5-gSlYB855sNdcBzLxMyj35ZJGR5IecUtGRQiGBk0kzZEM4FWNk9NCLGe0fUqYVYclM')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Ethereal Nebula</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Deep space cosmic dust and stars</p>
+</div>
+</div>
+<!-- 3. Mist Shrouded Pine -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Moody Pacific Northwest evergreen pine forest bathed in dense atmospheric morning fog, cold dark forest green tones, cinematic depth, quiet peaceful wilderness" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgsNathwjYd4IBfPFphdB_eWl9lRNRGFV6BG-QAFEIyhuC_qySwFMZTGiKkj2iC7Eyv49_si76Abcjt-6Q5M2KSLbzNsyjoD-yA9w4ctp4CtjNrI3-04oTsaENw2RSVg164Tc92mAiokwv3ShwieJRXzoWldnvZGP5Zbqg3V2cuyNMLdUUMKEZP_vpvkYXgjZQEB65QaKd-qj02mqQZdPXnLZSxnH1qR6fjaZPQAs')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Mist Shrouded Pine</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Moody green forest morning fog</p>
+</div>
+</div>
+<!-- 4. Minimalist Brutalism -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Architectural photograph of brutalist smooth concrete structures with sharp diagonal sunlight casting dramatic geometric shadow lines, minimalist high-end composition" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABngS-SsdKJxPCDtyqLXHRI1DWX6HC43NI2kAePPaNT3f0bPGdNygaRV1OBi8k4UVgwo6Fuky13OyKCdTI-kMUOSDBysTjmbkHDKSfSo55o4JhzAOm6UtrcKTsjRMIlod7h-EEEFYsUYWFlk3RFQgtPM5t-X8JSTfQLbC5A54LUGkZe6tG_nOY_QIPHxGxMFIhrodlwiNLb24Ufr8z-va0e8jlVyfHBkliOTMGw70')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Minimalist Brutalism</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Monochrome concrete geometry</p>
+</div>
+</div>
+<!-- 5. Bioluminescent Cove -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Magical nighttime ocean tide glowing vibrant electric blue and cyan from bioluminescent phytoplankton crashing gently against dark coastal sea cliffs beneath starry sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEeCuEZfqgIudcL8O3F_09RMi2GHNZkGsgMZkQObvwl9wiF12EfUr1lpXJwovzzWUeKKxpXlofymmWmnOQtsrJJ1b1moF6HxjrTsf1qufM0kPk6tdiXPI1w8Af7UOoBseSyEY9oB8RlwpCqcmzXouFQreVrwPyZl63HX2f0vm7YxbiP1g33zsbSBm4ReBSlGdcdH4eBO0nyrHZzPPZlTDTBfj7TiVvXWRPAiaYifA')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Bioluminescent Cove</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Glowing blue nocturnal waves</p>
+</div>
+</div>
+<!-- 6. Zen Rock Garden -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Traditional Japanese dry landscape rock garden with perfectly raked white sand waves, balanced smooth slate stones, warm tranquil morning illumination, zen sanctuary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5an4K34u8LYDJiEOVKeZpHtOiwvLl0AW3yNp1JKZ7ZD8jgGm3epxvUKzI3203es8_q7_qJ9SqORA3glv-zzmgSxmfdQdtKrpbtPboMqEHPfDo3IPZJtXeDdtdSDezeWPQv4LIVwKqwrSMf2GU-u-KUGFSwyu-eex0NRMXgo8HMXYosTibfGi39gQY2SSsr1LUNdri4Eih-C8Qt_w40P2XbT0fN0Qt6p9a-X8HOpA')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Zen Rock Garden</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Raked sand and smooth stones</p>
+</div>
+</div>
+<!-- 7. Vaporwave Sunset -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Retro 80s synthwave perspective grid stretching toward a giant glowing striped pink and orange sunset sun, neon palm silhouettes, gradient violet sky, aesthetic nostalgia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAttHPl4YqfzgF_c7FYiW-GItx5dn48nrkvilY9ocJ8PW-gusStJ1skRdMsWaqEoMSs6QCN8gcXXXDg-7b9zO1CLHlpf9vl3BOF0sU98ouwySaqfUNJvOMkVCwFI0vO6W5KrAXs7I5OXCM0fFT57KQoFDmHINNNym2drdtRN77OB0Sa4kj76jo5HuDptPALyBMpE8Igv4jeWas_3yr1gHg4IkchtYog_bewiaATrjU')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Vaporwave Sunset</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Retro grid and pastel sun</p>
+</div>
+</div>
+<!-- 8. Volcanic Caldera -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Active volcanic crater rim with fissures of incandescent molten orange magma cracking through dark basalt obsidian rocks, thick volcanic smoke rising into night sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLhRp2tdpdnQ_1-XAb5NTvqrD5f2_H35rsV32R8ESYmvbn9CkTFfFV8q4ni6_6OgYg1napPJTvoG0XIk5VoKIE2P7Xb43rC8niuzXBj_4IILR3kkUVUxBWw9Y4_6jk88lYHzbvtSysp0-weBxMZ-c0E7zMOiS0zgGnydDbrnStyof6J98NDUEyQjH4sGAW9LVExvKXI0TYYsjoKt8hjkfEIYT_YhNMZHnlhs1FkZk')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Volcanic Caldera</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Molten lava and dark rock</p>
+</div>
+</div>
+<!-- 9. Obsidian Monolith -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Macro close up shot of fractured volcanic black obsidian glass stone, razor sharp glossy crystal facets catching soft rim lighting against dark shadows, OLED wallpaper" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2sIJ5w2YAw-8FA3jWT-rlIHnM_ZVAbJ8vFqvM61wUMPuyftR6D1zlf1-da8XCllWHtTB8SZO5FVsNTRfRg3v3PVaqcPPc58Sm-iahR_Vc4bkjnUhwI9QG65x5PKQaL_PVng10YRYLc6MYNA9o8P4coHhQ0k6o-QRnIiuBglhj0L2uYdSlUtTK2iqctNSGunJOAyVId6TCiDnAClMJX4J_yPScIz9Lxuew7IMasYM')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Obsidian Monolith</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Dark obsidian texture close up</p>
+</div>
+</div>
+<!-- 10. Aurora Borealis -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Breathtaking emerald green and violet northern lights dancing across dark starry arctic night sky over frozen snow covered tundra and glassy icy reflective lake" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM8NWry6UCPew14DPPCT1JvQF5_lYBQAPUbhkAsttNEYQMe5ZF5X9yBQPRbjyawx4RajmgNX1tF-nhREHaAuAZ5wr3osfBhl3uEaX5S4bbcTtVrvOB7LZXI7pkfU9Z610A2Lf9ErFmcThobQGkkabuKOE4BqhPstUUlaWpqZqKSY_NtGXDh9YE4cK_zw-UkFd_Scu_YxOHGOOHln8yKhg1OtDeU-y4TIVADgsN9oU')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Aurora Borealis</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Green lights over snowy tundra</p>
+</div>
+</div>
+<!-- 11. Kyoto Bamboo Grove -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Looking up through towering dense green bamboo stalk canopy in Arashiyama Kyoto, golden hour sunlight rays piercing through bamboo leaves creating peaceful god rays" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCMNxLvMqn1jbI1qIn83eKpTvFJAmaY9SjbJj5I51tVsXe5pkbVuduOe2Ww0JIMwjGRzmIWzx1nd6zRzinjD9S1CCd8eDMUIwNLWHZdttkfwpmGZeaj9rgN-Jft7OoT_3Mb1lPvIwFsdgLnBWl3_HEusCW-Iq4Py9ZNMubQvLocUN7LQ8c5IKchoEeEJdGtEqLXQH_tF1pP6gi59l6DfqzSy-yCbXrCOxz1Rnwy5U')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Kyoto Bamboo Grove</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Sunlight filtering through stalks</p>
+</div>
+</div>
+<!-- 12. Glitch Gradient -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Experimental modern digital glitch art with vibrant chromatic aberration, RGB color channel split, holographic electric violet and neon lime distortion textures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQspjcSbHb1e3ePIQ1PAMACrVzQYzGFLuWneU4FAOMI6z5gkrnUTx6YSAlzlGRo2nOq8rvQb8oRjTPptrDVvctu7uz8TpNj4G2HN3BBejMtPmAori47yHnIIcXOb2kILsnJaNj584BFTSu3C_M4RKZvYC1vG1lNNh82UlEoNy894iS0m64qYsVvQ9Qxq7ceuZfNkFKI1pP-fPbYV6zxRtDDf0iaidqaB3Pmu-9bNQ')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Glitch Gradient</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Distorted chromatic aberration</p>
+</div>
+</div>
+<!-- 13. Alpine Crest -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Majestic towering jagged snow covered mountain peaks bathed in warm golden hour alpenglow orange light against crisp clear cold blue sky, epic vista" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcei6fW4Kz-K2W1fWtuxC6OWse4yaHFHNKalO1DVll-BUU1gp1DmROhluQ-nEtm4Jw__V1YwzOKZsaVL__Fgv87DgiBuPClJYMdIFqQMr_ILFlW-uCcEKjtBooK_ntg0aHAJ_cnzhf20Y-LHmM2fd3zpIy2w-3D2vfF0VD6Dk4PgB9Lon3FIq5z0KesKqksDjNpp_0yK18QoWxH-rXndbJLGHtXXkB928xliVbmB0')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Alpine Crest</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Snowy peaks at golden hour</p>
+</div>
+</div>
+<!-- 14. Liquid Mercury -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Hypnotic 3D fluid art of reflective molten chrome liquid mercury swirls and ripples with subtle violet and sapphire studio studio reflections, glossy metal abstract" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxMvTx1uu_05GVJWxLMHUEJp5IYoNnyzWUl-08MbZ3TX6jBG1LCkzprVi7k0Sdtd6EU6TIz6EwvfrZZ40EHcfgguxQTZBC61rG1fUpOMSb7dCSsdH2CF3UQB8jUjp34c5Phg5PWB5LUlsiwShUeZSRMYuNmXRLwCeOzPF9DqW3vzUf_SFl0YelP51cyiUtkDG_TGaqy6sOh-h7TDST0enHc3njWoO-gdd87wvwBBU')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Liquid Mercury</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Metallic silver fluid swirls</p>
+</div>
+</div>
+<!-- 15. Deep Ocean Trench -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Underwater view peering down into the deep abyssal oceanic trench, subtle sunbeams fading into pitch midnight navy blue gradient waters, serene and mysterious" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQEO_mocfwJ9pTGTwJboeEMnr_78DOp044HgWYqGfUksjDu0KwZVG-C9ne9LFJ8mH5NJTKsKAQjkF2qWs9X-UmAi_JoXURPxohJyM7eDcDwGwJUGJcn4a3cYJrRu7hbA-pfy7hAFI9UGofeO7ngTYX9jnIQIG09_6KiEJroGip8Jm8XxYumnCk1hfb4SLTZ5wCII8xbAub8PHVLYrXTz2e7ddUznqFpwH2TLHpixA')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Deep Ocean Trench</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Abyssal blue gradient depths</p>
+</div>
+</div>
+<!-- 16. Desert Dune Lines -->
+<div class="w-full relative aspect-[9/16] rounded-xl overflow-hidden shadow-sm bg-surface-container-low group cursor-pointer transition-transform duration-300 active:scale-95">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Wind swept sand dunes in Sahara desert, crisp rippled sand textures with sharp undulating ridge curves and dramatic evening shadow cast across warm terracotta dunes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8M1mkRmjWLneg9DmGygbpXvw35ZYiw8-iuvPtWwez-mTSeEK8gU_sz9DbqmPJTjkcegS_9Xg1PVOf-JWcHrx_eLEiOjWb_cV8e8rqKyvBcSOLac-KQ2IafUrjGxqv8o05VCj-wG3yyQRnZWwfiT7jSa374aBydFewWnFtEjVVizO58i14Mu5qNIL8jmVmCz99edJ6fx85478zr5YaM2hwKkvrnV929i93PfelvOY')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
+</div>
+<div class="absolute top-2.5 right-2.5">
+<span class="px-1.5 py-0.5 rounded-full bg-black/40 backdrop-blur-md text-white font-label-sm text-label-sm font-bold">4K</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col justify-end text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight drop-shadow-sm truncate">Desert Dune Lines</h3>
+<p class="font-body-sm text-body-sm text-surface-variant font-normal opacity-90 line-clamp-1 mt-0.5">Wind sculpted sand ridges</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Friendly End-of-Gallery Delight Note -->
+<div class="px-margin pt-space-lg pb-space-xs text-center flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[22px]">draw</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Can't find your style?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+      Use our AI Generator to describe your ideal theme with custom palettes &amp; lighting.
+    </p>
+<a class="mt-space-sm h-11 px-space-lg rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-2 shadow-md shadow-primary/25 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+      Try Wallpaper Generator
+    </a>
+</div>
+</div>
+<script>
+  // Filter chips interaction logic
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.className = 'filter-chip h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0 transition-all select-none';
+      });
+      chip.className = 'filter-chip h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md shrink-0 shadow-md shadow-primary/20 flex items-center transition-all select-none';
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="discover" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Discover</span></a><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors [&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md" data-path="categories" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">grid_view</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Categories</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="generator" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bolt</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Generator</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="saved" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bookmark</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Saved</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="profile" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">person</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Profile</span></a></div></nav></body></html>

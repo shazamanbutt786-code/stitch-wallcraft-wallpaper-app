@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#4412d1", "inverse-surface": "#2f3133", "primary-fixed-dim": "#c8bfff", "surface-bright": "#f9f9fc", "on-primary": "#ffffff", "on-surface-variant": "#484555", "surface-tint": "#5c3be8", "on-secondary-fixed": "#341100", "on-primary-fixed": "#1a0063", "tertiary-container": "#157d44", "surface-variant": "#e2e2e5", "secondary-fixed": "#ffdbcb", "error": "#ba1a1a", "primary-fixed": "#e5deff", "on-tertiary": "#ffffff", "primary-container": "#6b4df7", "error-container": "#ffdad6", "tertiary": "#006232", "outline-variant": "#c9c4d8", "surface-container-low": "#f3f3f6", "on-secondary-container": "#742e00", "on-tertiary-fixed-variant": "#005229", "on-secondary-fixed-variant": "#793100", "surface-dim": "#dadadc", "inverse-on-surface": "#f0f0f3", "tertiary-fixed": "#97f7b1", "on-tertiary-container": "#bfffcc", "secondary": "#994614", "primary": "#522dde", "on-error": "#ffffff", "surface-container-high": "#e8e8ea", "on-error-container": "#93000a", "surface": "#f9f9fc", "surface-container": "#eeeef0", "background": "#f9f9fc", "on-tertiary-fixed": "#00210d", "tertiary-fixed-dim": "#7cda96", "on-secondary": "#ffffff", "on-surface": "#1a1c1e", "on-primary-container": "#f2edff", "surface-container-highest": "#e2e2e5", "inverse-primary": "#c8bfff", "on-background": "#1a1c1e", "surface-container-lowest": "#ffffff", "outline": "#787587", "secondary-container": "#ff955d", "secondary-fixed-dim": "#ffb691" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xs": "0.25rem", "space-2xl": "3rem", "margin": "1.25rem", "margin-lg": "2.5rem", "margin-sm": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "space-lg": "1.5rem", "space-xl": "2rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="WallCraft Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAIAWmr6XIZAqDkwKZWyAJIY6ekynQvyp-A1OAlavT9xoZHMiMLq197M87AmL6QL1_6WZeuligdNgD7gU1B2UivN1vOvi2EfQnuG0L9FlbPh8uyK065oJVVw58Z1mqpbxeANLlAC9qKuMRZMPdedvSQP27UniJP13PbKJp_UKLHUluYTUBBJTPWIlWuria70KXkKnn3F0AysjnA4kYyHmHiFx6iuOP0QrNCOIt_WcE5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">WallCraft</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Discover</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Account" class="w-11 h-11 flex items-center justify-center rounded-full hover:ring-2 hover:ring-primary/20 transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMBpyAYtdX1fIKYHnOTYxHjA5HK1CuJ3_Jd5k9VXSAgpCcC_PfARZ_XjJRUEXGVrYG6bApj0RBeGjutWXKBdd9VInQ5GfRzlIYmEdvNA35s9x0ZrMTeMv49emhn0Vr1MifVPmVs72e9ZlK0O7EMULr5dERssa5kXOtuRCDGbZn7nSaCMrXNQ8qsZkYOebswA-ygqqjZpOWaYgDrPEp5sA0zOlYgdEV_md2Q4jPY4"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full pb-6">
+<!-- Search & Filter Controls Section -->
+<section class="flex flex-col gap-space-sm px-margin pt-space-xs">
+<!-- Active Search Input Box -->
+<div class="relative flex items-center w-full h-12 rounded-full bg-surface-container-low transition-all duration-200 focus-within:bg-surface-container-lowest focus-within:shadow-[0_8px_24px_rgba(107,77,247,0.12)]">
+<span class="material-symbols-outlined text-outline ml-4 text-[22px] flex-shrink-0 select-none">search</span>
+<input class="w-full h-full bg-transparent px-space-xs font-body-md text-body-md text-on-surface focus:outline-none placeholder-outline" id="search-input" placeholder="Search 4K themes, aesthetics..." type="text" value="Cyberpunk neon city"/>
+<!-- Clear Button -->
+<button aria-label="Clear search input" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface active:scale-95 transition-transform mr-1" id="clear-search-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+<!-- Filter Tuning Trigger with Active Badge Count -->
+<button aria-label="Filter configuration (3 active)" class="relative w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary active:scale-90 transition-transform mr-1.5 flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+<!-- Filter Chips Horizontal Scroll -->
+<div class="-mx-margin px-margin flex items-center gap-space-xs overflow-x-auto no-scrollbar scroll-smooth py-1">
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-[0_4px_12px_rgba(107,77,247,0.25)] transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+        Trending
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        OLED Black
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Cyberpunk
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Synthwave
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Minimalist
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        4K Ultra
+      </button>
+</div>
+</section>
+<!-- List Toolbar: Metrics, Sort & Grid Density -->
+<section class="flex items-center justify-between px-margin pt-space-md pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">1,240</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">wallpapers found</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Sort Selector Dropdown Pill -->
+<button class="h-8 px-space-xs rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span>Top Rated</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Grid Density Toggle -->
+<button aria-label="Toggle grid density" class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" id="grid-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+</div>
+</section>
+<!-- 2-Column Wallpaper Gallery Grid -->
+<section class="px-margin pt-space-xs">
+<div class="grid grid-cols-2 gap-gutter-sm" id="wallpaper-grid">
+<!-- Wallpaper Card 1 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Vertical portrait wallpaper of a vibrant cyberpunk city alley at night with towering holographic purple and turquoise kanji signs reflecting onto rain slick wet asphalt streets, atmospheric volumetric purple fog and dramatic rim lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCScwyCfhsH7Kw8TBPjoSeS0pI0tGfHaOkm3LsyCr_ea8K-VSq494Uti2W11Wcq3dcTOpHSY-P8K-rLN3rVD0NUYBvthwuryT1v-x_dUN_T91BVHdncH4fFK3qGlDpCEIHM83FZLQf6LpF3RGL6umj9p15pav0psPj3CjXcnlZzI5kcpJirIb8mY-opz_A32zEdHxzuD77k4BDH5Gs_TJd0wbHwXb6Fz9BAtedWTzU')">
+<!-- Top Badges -->
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K UHD</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+</div>
+<!-- Bottom Meta & Actions Overlay -->
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Neon District 7</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Viktor V.</span>
+</div>
+<button aria-label="Favorite wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 2 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Cyberpunk Tokyo Shibuya crossing soaked in rainy reflections under magenta and deep blue neon advertisements, translucent umbrella held in foreground glowing softly with pink LED edges, high fidelity 4K rendering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEB4NbEvRMy6381qzt0oOhtdIDmTQppFaay0ch7L2fAQ2oCjfzmWFtmuSCEuI7nGYoZSlnHbOVYHPCxywkEkeiqG8nRZnu564pI2H4G6BXnLSJy8VTLmUPxRZyyr4hVfiy4vhxFXYiFof7p0ppALMuZ9Hkxg7FOU-Fw318P-bSMNUfKH8aJlhFbtUwslcUw_eRP4gDM8qmVB6ywlR2RBwsa4H2n7NRLCTMJt9w4I4')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Shibuya Rain</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Elena Rostova</span>
+</div>
+<button aria-label="Save to bookmarks" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 3 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Futuristic Akihabara backstreet glowing in intense violet, emerald green and gold neon signboards, cable clusters suspended between skyscrapers, warm moody street noodle stall lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBugQWLEHKEWsE4zOh11rducWr2YgynQ8SddPlR2QCrXvcTu7HIW-sSv3mhnw_XKAE35s4vv_r7gdE1F1K7qCLhatbWRyhH41ACpfTxj0q-rDoMLWPB_w8whmnOxaBXUlsNaKlrCDc40fGOAveQgBC6HHmnVHROXxICbJ-buP74DheiTe5UQ-NEdb2qAdfvii_rcnIig6rxxkUhY6hbsanvKzZxPmCSbJthc04oSyU')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Akihabara Late</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Kenji Sato</span>
+</div>
+<button aria-label="Download wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">arrow_downward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 4 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Sci-fi cyberpunk rooftop edge vigilante silhouette gazing over a massive illuminated megacity with flying aerodynes, laser searchlights in deep indigo sky, rich purple mist and sharp glowing architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZd2MvZkmZP93KmtWWJG2ykVz9-bEjWup2rbNu7EAihjqw06PhEPntnqYK6TcUEhwkQ8dnmj1PbuOGz2eUoadFhzEqb0nodeGN5MBFFmVIXFRy1EHTK9tinz0LB2a86rq64hZY9EO0YDm6oM6ixU9tOmPTqG0fqV0jmDRHn_7QmYg5PBYw1M3PPwM1c5IhW_xhv9A18m1zZ1t8y67iaJ5yDytbMFXi9UFjnMf697Q')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Rooftop Vigil</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Sarah Chen</span>
+</div>
+<button aria-label="Favorite wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">favorite_border</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 5 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Cybernetic elevated highway with hyper-speed glowing light trails of autonomous electric vehicles, neon billboards spanning multiple architectural levels, vibrant synthwave electric purple and cyan glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqN7ql3K0xgcpvfabf4KEMWBcBB9WbstHDFbJQn--1hTqtNTQviKGO2lQbMUiE66C4SvRgJdlAu29OmTgUPRvrpwB5e9ZjAX3j089n0GVsZxNdZK9mO8gzVstFRN65cjMic1Qd5ebKdHy_OQpzdLSlTnhnMTwmfWYGtWMZXXSCAKI_uSyab8QbVb8op1WK7jlixSZspiNmZHYDyZGLbOyQmEryHa9kvMlz1WzXXJk')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Cyber Highway</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Marcus Vance</span>
+</div>
+<button aria-label="Favorite wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">favorite_border</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 6 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Futuristic Neo Tokyo expressway weaving between towering brutalist skyscrapers bathed in luminous magenta, lavender, and electric orange holographic advertisements under dark starry sky." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy3O1ZDO8BlU8IL9EmeFlteAznQUq-NZhmt6cm0TvSSsLlK-w0p1YfLTe5S7-CkKZs56A5IpNAKuh3OHE2bmj0noUN0iAsP32W6p9gbkdQs9zINAXoYcdG42NqgjY_Jg58bXQVuw_RcTHGygPkYHpsFQ3IH1DPC0uzB7ZKVZARUfS3jcxCrWBk7kbTuqNC_e-6gOZ-xlgQGKJuY2iYVeZuyNTmHtr3d-38VFqkhGs')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Neo Expressway</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Yuki Tanaka</span>
+</div>
+<button aria-label="Download wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">arrow_downward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 7 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Detailed close up of an android face with sleek obsidian and chrome skin reflecting vivid neon pink storefront typography, synthetic bioluminescent iris glowing violet, cinematic rain drops." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOIWlPkwRXDi-USSedUBp0PPspWdskDM1sSj6xFVaExu2olQjdRn7fagzlF5PFB8sVz2P3zLpYcSPUk1tCP6Lcvl0gK5LznbT-RMbN9tpOB_8vL6SlZiWAZdlPiAzdrgZCrSomlQFn4XxKurLbvaAy6GO9qnHJnfw8IRKvQkzps8KwPZrFgtOyOvBrZbagwWQnSa8_C_t7tWhx8MGwxFLvCJi3npcRSAWHQvMm-cs')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Android Echo</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Alex Rivers</span>
+</div>
+<button aria-label="Favorite wallpaper" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">favorite_border</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Wallpaper Card 8 -->
+<article class="group relative flex flex-col rounded-xl overflow-hidden bg-surface-container-low aspect-[9/16] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full h-full bg-cover bg-center flex flex-col justify-between p-space-xs relative" data-alt="Underground subway terminal in a futuristic dystopian city with glowing turquoise directional signage, steam rising from grates illuminated by crimson backlights, hyper-detailed industrial texture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8fNGxBUzTKpSSAAiRdCIASP25YrZ2TZcOvJHNPGtnaiK2ooiFhsTrAGPS31SkvQqPBsJgMP1afWDxGdMdGgWQKHI70_6raWyoOX1aogAUaT3ERilLOpDMrnYRgn7qTSRF35OsYW3r-s6kT3GmtGnnksb7GDHwvjh1s_DxUP0H9w44kZoieqzZtSnkkaZglSJMJMYRmk2NgQfcTTgrzVWd1icabtXJoppAU8-PuiI')">
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-[10px] text-primary font-bold">4K</span>
+</div>
+<div class="z-10 flex items-end justify-between gap-1 pt-6 pb-0.5 bg-gradient-to-t from-black/85 via-black/40 to-transparent -mx-space-xs -mb-space-xs px-space-xs rounded-b-xl">
+<div class="flex flex-col min-w-0 flex-1 pr-1">
+<span class="font-headline-sm text-[14px] leading-tight text-white font-bold truncate">Underground Grid</span>
+<span class="font-body-sm text-[11px] text-white/70 truncate">By Delta Nine</span>
+</div>
+<button aria-label="Save to bookmarks" class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[19px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Related Search Tags Section -->
+<section class="flex flex-col gap-space-sm px-margin pt-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tag</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Related Searches</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Explore</span>
+</div>
+<!-- Tags Mosaic -->
+<div class="flex flex-wrap gap-2 pt-1">
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Cyberpunk Alleyways
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Neon Rain Tokyo
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Future Cityscape
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Hologram Skyline
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Dark Sci-Fi Corridor
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Synthwave Grid
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Mecha Samurai
+      </button>
+<button class="h-8 px-3 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-[12px] flex items-center gap-1 transition-colors" type="button">
+<span class="text-outline text-[11px]">#</span>Glitch Art Neon
+      </button>
+</div>
+<!-- Load More Action -->
+<div class="pt-space-md flex flex-col items-center">
+<button class="w-full h-12 rounded-full bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-[0.99] transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+        Load more wallpapers
+      </button>
+<span class="font-body-sm text-[11px] text-outline mt-2">Showing 8 of 1,240 results</span>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interactions: Clear Input & Grid Layout toggling
+  const clearBtn = document.getElementById('clear-search-btn');
+  const searchInput = document.getElementById('search-input');
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchInput.focus();
+    });
+  }
+
+  const gridToggleBtn = document.getElementById('grid-toggle-btn');
+  const wallpaperGrid = document.getElementById('wallpaper-grid');
+  let isSingleCol = false;
+
+  if (gridToggleBtn && wallpaperGrid) {
+    gridToggleBtn.addEventListener('click', () => {
+      isSingleCol = !isSingleCol;
+      if (isSingleCol) {
+        wallpaperGrid.classList.remove('grid-cols-2');
+        wallpaperGrid.classList.add('grid-cols-1');
+        gridToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">grid_view</span>';
+      } else {
+        wallpaperGrid.classList.remove('grid-cols-1');
+        wallpaperGrid.classList.add('grid-cols-2');
+        gridToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">view_agenda</span>';
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors [&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md" data-path="discover" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Discover</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="categories" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">grid_view</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Categories</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="generator" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bolt</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Generator</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="saved" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bookmark</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Saved</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="profile" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">person</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Profile</span></a></div></nav></body></html>

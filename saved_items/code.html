@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#4412d1", "inverse-surface": "#2f3133", "primary-fixed-dim": "#c8bfff", "surface-bright": "#f9f9fc", "on-primary": "#ffffff", "on-surface-variant": "#484555", "surface-tint": "#5c3be8", "on-secondary-fixed": "#341100", "on-primary-fixed": "#1a0063", "tertiary-container": "#157d44", "surface-variant": "#e2e2e5", "secondary-fixed": "#ffdbcb", "error": "#ba1a1a", "primary-fixed": "#e5deff", "on-tertiary": "#ffffff", "primary-container": "#6b4df7", "error-container": "#ffdad6", "tertiary": "#006232", "outline-variant": "#c9c4d8", "surface-container-low": "#f3f3f6", "on-secondary-container": "#742e00", "on-tertiary-fixed-variant": "#005229", "on-secondary-fixed-variant": "#793100", "surface-dim": "#dadadc", "inverse-on-surface": "#f0f0f3", "tertiary-fixed": "#97f7b1", "on-tertiary-container": "#bfffcc", "secondary": "#994614", "primary": "#522dde", "on-error": "#ffffff", "surface-container-high": "#e8e8ea", "on-error-container": "#93000a", "surface": "#f9f9fc", "surface-container": "#eeeef0", "background": "#f9f9fc", "on-tertiary-fixed": "#00210d", "tertiary-fixed-dim": "#7cda96", "on-secondary": "#ffffff", "on-surface": "#1a1c1e", "on-primary-container": "#f2edff", "surface-container-highest": "#e2e2e5", "inverse-primary": "#c8bfff", "on-background": "#1a1c1e", "surface-container-lowest": "#ffffff", "outline": "#787587", "secondary-container": "#ff955d", "secondary-fixed-dim": "#ffb691" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xs": "0.25rem", "space-2xl": "3rem", "margin": "1.25rem", "margin-lg": "2.5rem", "margin-sm": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "space-lg": "1.5rem", "space-xl": "2rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="WallCraft Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAIAWmr6XIZAqDkwKZWyAJIY6ekynQvyp-A1OAlavT9xoZHMiMLq197M87AmL6QL1_6WZeuligdNgD7gU1B2UivN1vOvi2EfQnuG0L9FlbPh8uyK065oJVVw58Z1mqpbxeANLlAC9qKuMRZMPdedvSQP27UniJP13PbKJp_UKLHUluYTUBBJTPWIlWuria70KXkKnn3F0AysjnA4kYyHmHiFx6iuOP0QrNCOIt_WcE5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">WallCraft</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">SAVED</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Account" class="w-11 h-11 flex items-center justify-center rounded-full hover:ring-2 hover:ring-primary/20 transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMBpyAYtdX1fIKYHnOTYxHjA5HK1CuJ3_Jd5k9VXSAgpCcC_PfARZ_XjJRUEXGVrYG6bApj0RBeGjutWXKBdd9VInQ5GfRzlIYmEdvNA35s9x0ZrMTeMv49emhn0Vr1MifVPmVs72e9ZlK0O7EMULr5dERssa5kXOtuRCDGbZn7nSaCMrXNQ8qsZkYOebswA-ygqqjZpOWaYgDrPEp5sA0zOlYgdEV_md2Q4jPY4"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full px-margin-sm pb-space-xl gap-space-md">
+<!-- 1. Page Title Row -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Saved Items</h1>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm">1,240</span>
+</div>
+<button aria-label="Sync status" class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-tertiary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+</button>
+</div>
+<!-- 2. Search Bar -->
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1 flex items-center bg-surface-container-low rounded-full h-12 px-space-md transition-all focus-within:bg-surface-container-lowest focus-within:shadow-md">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs shrink-0">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none min-w-0" id="saved-search-input" placeholder="Search 1,240 saved wallpapers" type="text"/>
+<button aria-label="Clear search" class="hidden w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant items-center justify-center ml-space-2xs shrink-0" id="clear-search-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<button aria-label="Filters" class="relative w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+<span class="absolute -top-0.5 -right-0.5 min-w-[20px] h-5 px-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center shadow-sm">3</span>
+</button>
+</div>
+<!-- 3. Filter Chips (Horizontal Scrollable Row) -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-space-2xs -mx-margin-sm px-margin-sm" id="primary-filter-chips">
+<button class="filter-chip shrink-0 h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-md transition-all active:scale-95" data-filter="all" type="button">
+      All Saved
+    </button>
+<button class="filter-chip shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" data-filter="ai" type="button">
+      AI Generated
+    </button>
+<button class="filter-chip shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" data-filter="amoled" type="button">
+      AMOLED Dark
+    </button>
+<button class="filter-chip shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" data-filter="dual" type="button">
+      Dual Monitor
+    </button>
+<button class="filter-chip shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center gap-1 transition-all active:scale-95" data-filter="sort" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Sort</span>
+</button>
+</div>
+<!-- 4. List Toolbar -->
+<div class="flex flex-col gap-space-sm">
+<!-- Secondary Status Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto">
+<span class="shrink-0 h-6 px-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">aspect_ratio</span>
+        All Formats
+      </span>
+<span class="shrink-0 h-6 px-2.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+        Cloud Synced
+      </span>
+<span class="shrink-0 h-6 px-2.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+        Pro Tier
+      </span>
+</div>
+<!-- Sort & Select Multiple Row -->
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-1 text-on-surface font-label-md text-label-md py-1 rounded-lg hover:text-primary transition-colors" type="button">
+<span>Recently Saved</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-fixed text-primary font-label-md text-label-md transition-all active:scale-95" id="select-multiple-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">checklist</span>
+<span id="select-multiple-label">Select Multiple</span>
+</button>
+</div>
+</div>
+<!-- 5. 2-Column 4K Wallpaper Card Grid -->
+<div class="grid grid-cols-2 gap-gutter-sm" id="wallpaper-grid">
+<!-- Card 1 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic cyberpunk cityscape of Neon Genesis Tokyo at night, towering holographic skyscrapers, rain-slicked streets reflecting electric violet and neon cyan lights, flying vehicles streaking through misty air, ultra-detailed 8k digital art, dramatic cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY3iOx-d_maNg01nQydhzJVX5xIelkRYzxtlHeJXShqn3rpU5C0AtWS_BXgA_Wai3gSDhEce2KfKjIzBSrETUmyM1UzbwD47p-5BsX-RQ5sYVvq3erABkLj7gDLuumUd40IE9pkb7T9HRQe7Sm3d4bdZMlQhQvV5SK-P1zue3UevxDk_1wQqYLLJL88WujYuSRl49EDPBHQQQWgMkoEryoHAAzXWEuk0unNkm5N8E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<!-- Top Left Badge -->
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K UHD
+        </span>
+<!-- Selection Indicator (hidden until Select Multiple is active) -->
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<!-- Bottom Info & Bookmark -->
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Neon Genesis Tokyo</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Cyberpunk Cityscape</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bioluminescent cove in a deep ocean abyss, glowing electric blue and violet jellyfish drifting past crystalline underwater rock formations, ethereal volumetric light rays piercing dark indigo water, serene and mystical deep sea photography, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhYjQ5vo0Ed9f_0P-Pxe-pl6tfoa9ufAwv__8pszC3xEmJaT9F1BvM1HcOUYIf1FWnxatBPiLEU25K1FDQKDu1k5hU0edFJbh8dw-B_ePvqkLysfSMwa19IIB2psci-VB35SP7ErViV5dGSANrzVc6dqDbXqxO3gzyBqqcEC3ezUek1cq4-L_ZwPpagN3lvckbP2ISyMNkOthdln7on1Qjcvd8GRJNz7t6sGDxrg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Bioluminescent Cove</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Deep Ocean Abyss</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Quantum Monolith floating in a minimalist abstract geometric void, matte obsidian prism surrounded by orbiting iridescent glass rings and soft violet rim lighting, clean architectural 3D render, ultra-sharp studio reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgMA8AQmkOOcyjSnlutfuWDn11k-i58hvp6VR22Pg05Ndxa915FPZb3dMQGz9f7XSSBwPVaaEHA9r4_4cg7OSZoU6prTUQbKac_2SyR5FmZ9zdaF3WnfXwWE5nKSnNZgccKdR4RVdanX6pHXb787ZfLzXoxTmOB_RY27B0npE4d9-RCiGyJdEHr2m1yafWV42SSmE8KbCoYFUC-6jrQ_J088iasn87U0HaD-TJHjg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Quantum Monolith</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Abstract Geometry</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Solar Flare Horizon over a deep space nebula, radiant golden-amber plasma arc erupting against swirling violet and magenta cosmic dust clouds, distant starfields, awe-inspiring astrophotography aesthetic, rich dynamic range." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkNfGvtsLRgmdv9Vf_OKMKi3QS9mSh5bXPVqtkHu77B9vMx7UtRCSg_1hZjJgmnHfO1nhd_IiySnKHONYO54Pe1SsjhG1U7QXbicmrTM93E6pEGKXMgL7WXSpEV0ztzsXFMGNU5nz30f_C9g0fXHhkmLDnon8050GEBJObkpRT0GQldettnCW44y8U7CRrijgITlKxfsbk7NKjDFYGWJn3LYf2fM18FP4GAvxLek0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K UHD
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Solar Flare Horizon</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Deep Space Nebula</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cybernetic Lotus blooming in a dark reflective pool, translucent fiber-optic petals glowing with soft lavender and emerald light, delicate water droplets, macro futuristic botanical art, dreamy bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFrkJseGMHHy2ORXd76qzB2RPwGOn3qcgGV9u_G6cQ8rx3Gxlcc93wbvpHXTpYfkt7RG19eyPRQ_khQXswt36frIbjPjxkrG6m8kLETVMWEyujnBL95-NPBAcIfBQdK4Z8JyI5DGpC8qHMZ0JfXEWxKOMtdyAjTRms3yN9o2YTSEUFmzyICYhAt2w-K5j_eTAbtoY5X2zahpJJBsvTknt0j9NK7P1NHYIVWe3a_ZQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Cybernetic Lotus</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Cyberpunk Flora</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Obsidian Dunes under a twilight sky, sweeping minimalist black volcanic sand ridges with crisp silver-violet moonlight catching the crests, ultra-clean horizon, serene atmospheric landscape photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_uUH-MVxIJ2MZoHQiddWvAcLhnJHA_U6jhH3D3pPRddFESo11aB2GcrmCmj6xbsQ2bEMHE28T6mx2NAY5DenhCB7xLWjqlGfsvTdWCPVkulmRPN13BDBCAQaE3uI65pYl0-FLNeUIeBqJm4nP7KMtczkkJyKenlUZuQZ8chmBptIsps63b6PT_enjaAYwfgbFcswS2rdjADq7cF3YKQ5k0lt6tz3Zcef7C6vs_0M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Obsidian Dunes</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Minimalist Desert</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Chrome Mirage surreal architecture, sweeping liquid-metal arches and mirrored brutalist curves reflecting a pastel lavender and soft peach sky, tranquil shallow water floor, avant-garde 3D architectural visualization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD3vFiRP3luy85-jWKMLfiQDC7bTtjdOb9anu0hfH-fpiBSoL1QrtWAqvKjQx0E0_C6pW-aKsz5kP3tG_1VP-xZo_CIBqScv0NKVaiBmackzsu_vUHEuNT9LXLAHQAqrCDFywFuyWZpOeFLDCWJrnfSeRy-OKYeXNQPcBK2lpuvj94WW-vYwkC21rTja1DWGxkCWuTMwe_NCuXCVxuKAt-LbRfjGz4XUqwpqlZ1Ns"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Chrome Mirage</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Surreal Architecture</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 8 -->
+<article class="wallpaper-card group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm transition-transform duration-200 active:scale-[0.98]">
+<div class="relative aspect-[9/16] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Silicon Forest holographic woods, tall crystalline pine trees with glowing circuit-like veins, soft emerald and violet mist drifting through the forest floor, enchanted sci-fi nature atmosphere, crisp 4K detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ieeGAeJvcJS1PDFtaoalteIf2Y40NGIYYboR-zgtRcDbsWnVbJj_Jbk2-_dxhaGLUxAOvClMe4c1vpm_woxacpVodyWwCnEp1IsXTKqsrbEkJ2IAjYfAMqc1KorImiWVKdpxJdDQ00ysiG8W7aW6YSAepUQgseJJVhRF6t-cjb5ZmQcL2Rd8ha-O5ctQDoa200v55HQFI3P9IRuVyEHvMgGYv_p-b_iZxqr1fbg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/15 to-transparent"></div>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-lg bg-on-surface/65 backdrop-blur-md text-surface-container-lowest font-label-sm text-label-sm tracking-wide">
+          4K UHD
+        </span>
+<div class="select-badge hidden absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-surface-container-lowest/90 text-primary items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex items-end justify-between gap-space-xs">
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-label-lg text-surface-container-lowest truncate">Silicon Forest</h2>
+<p class="font-body-sm text-body-sm text-surface-container-lowest/80 truncate">Holographic Woods</p>
+</div>
+<button aria-label="Remove bookmark" class="bookmark-btn shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-surface-container-lowest flex items-center justify-center transition-transform active:scale-90" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+<script>
+  (function () {
+    const searchInput = document.getElementById('saved-search-input');
+    const clearBtn = document.getElementById('clear-search-btn');
+    if (searchInput && clearBtn) {
+      searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim().length > 0) {
+          clearBtn.classList.remove('hidden');
+          clearBtn.classList.add('flex');
+        } else {
+          clearBtn.classList.add('hidden');
+          clearBtn.classList.remove('flex');
+        }
+      });
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('flex');
+        searchInput.focus();
+      });
+    }
+
+    const filterChips = document.querySelectorAll('.filter-chip');
+    filterChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach((c) => {
+          c.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-md');
+          c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        chip.classList.add('bg-primary-container', 'text-on-primary', 'shadow-md');
+      });
+    });
+
+    const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
+    bookmarkBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFilled = icon.style.fontVariationSettings.includes('1');
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.add('opacity-75');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('opacity-75');
+        }
+      });
+    });
+
+    const selectBtn = document.getElementById('select-multiple-btn');
+    const selectLabel = document.getElementById('select-multiple-label');
+    const selectBadges = document.querySelectorAll('.select-badge');
+    let selectMode = false;
+
+    if (selectBtn) {
+      selectBtn.addEventListener('click', () => {
+        selectMode = !selectMode;
+        selectLabel.textContent = selectMode ? 'Done' : 'Select Multiple';
+        selectBtn.classList.toggle('bg-primary-container', selectMode);
+        selectBtn.classList.toggle('text-on-primary', selectMode);
+        selectBtn.classList.toggle('bg-primary-fixed', !selectMode);
+        selectBtn.classList.toggle('text-primary', !selectMode);
+
+        selectBadges.forEach((badge) => {
+          if (selectMode) {
+            badge.classList.remove('hidden');
+            badge.classList.add('flex');
+          } else {
+            badge.classList.add('hidden');
+            badge.classList.remove('flex', 'bg-primary-container', 'text-on-primary');
+            badge.classList.add('bg-surface-container-lowest/90', 'text-primary');
+          }
+        });
+      });
+    }
+
+    const cards = document.querySelectorAll('.wallpaper-card');
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        if (!selectMode) return;
+        const badge = card.querySelector('.select-badge');
+        if (!badge) return;
+        const isSelected = badge.classList.contains('bg-primary-container');
+        if (isSelected) {
+          badge.classList.remove('bg-primary-container', 'text-on-primary');
+          badge.classList.add('bg-surface-container-lowest/90', 'text-primary');
+        } else {
+          badge.classList.add('bg-primary-container', 'text-on-primary');
+          badge.classList.remove('bg-surface-container-lowest/90', 'text-primary');
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="discover" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Discover</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="categories" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">grid_view</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Categories</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="generator" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bolt</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Generator</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-primary-container transition-colors" data-path="saved" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-primary-container text-on-primary"><span class="material-symbols-outlined text-[22px]">bookmark</span></div><span class="tab-label font-label-md text-label-sm leading-none transition-colors text-primary-container">Saved</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="profile" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">person</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Profile</span></a></div></nav></body></html>

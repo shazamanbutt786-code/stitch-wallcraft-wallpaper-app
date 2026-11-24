@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-on-surface": "#2e3037",
+          "on-tertiary": "#003828",
+          "on-secondary-container": "#00515d",
+          "tertiary-fixed-dim": "#40dfae",
+          "surface-container-lowest": "#0c0e14",
+          "surface-container-highest": "#33353b",
+          "on-background": "#e2e2ea",
+          "primary-fixed-dim": "#ccbeff",
+          "primary": "#7C5CFC",
+          "on-tertiary-fixed-variant": "#00513c",
+          "tertiary": "#40dfae",
+          "on-primary-fixed-variant": "#4c25b5",
+          "on-error-container": "#ffdad6",
+          "on-secondary-fixed-variant": "#004e5a",
+          "on-surface-variant": "#94a3b8",
+          "outline": "#64748b",
+          "on-surface": "#f8fafc",
+          "background": "#0b0c10",
+          "on-tertiary-container": "#003123",
+          "on-error": "#690005",
+          "secondary-fixed-dim": "#2fd9f4",
+          "error": "#ffb4ab",
+          "on-secondary-fixed": "#001f25",
+          "surface-container": "#1d212d",
+          "on-secondary": "#00363e",
+          "primary-fixed": "#e7deff",
+          "surface-dim": "#111319",
+          "surface-container-high": "#262b3a",
+          "outline-variant": "rgba(255, 255, 255, 0.08)",
+          "on-primary": "#ffffff",
+          "on-primary-fixed": "#1f0060",
+          "secondary": "#5de6ff",
+          "inverse-primary": "#6543ce",
+          "surface-tint": "#7c5cfc",
+          "on-tertiary-fixed": "#002116",
+          "surface": "#0b0c10",
+          "error-container": "#93000a",
+          "on-primary-container": "#f8fafc",
+          "secondary-container": "#00cbe6",
+          "tertiary-container": "#00a47d",
+          "inverse-surface": "#e2e2ea",
+          "primary-container": "#7C5CFC",
+          "surface-bright": "#373940",
+          "secondary-fixed": "#a2eeff",
+          "surface-container-low": "#171922",
+          "tertiary-fixed": "#64fcc9",
+          "surface-variant": "#1d212d"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-tablet": "1rem",
+          "margin": "1rem",
+          "gutter": "0.75rem",
+          "space-sm": "0.5rem",
+          "space-xl": "2.25rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Space Grotesk", "sans-serif"],
+          "label-md": ["Space Grotesk", "sans-serif"],
+          "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["Space Grotesk", "sans-serif"],
+          "headline-sm": ["Space Grotesk", "sans-serif"],
+          "label-lg": ["Space Grotesk", "sans-serif"],
+          "display": ["Space Grotesk", "sans-serif"],
+          "headline-lg-mobile": ["Space Grotesk", "sans-serif"],
+          "body-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Space Grotesk", "sans-serif"]
+        },
+        "fontSize": {
+          "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+          "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+        }
+      }
+    }
+  }
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style></head><body class="bg-[#0B0C10] font-body-md text-[#F8FAFC] flex flex-col min-h-screen selection:bg-[#7C5CFC]/30 selection:text-white"><header class="fixed top-0 w-full z-50 pt-safe bg-[#111319]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_1px_12px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="WallCraft Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAIAWmr6XIZAqDkwKZWyAJIY6ekynQvyp-A1OAlavT9xoZHMiMLq197M87AmL6QL1_6WZeuligdNgD7gU1B2UivN1vOvi2EfQnuG0L9FlbPh8uyK065oJVVw58Z1mqpbxeANLlAC9qKuMRZMPdedvSQP27UniJP13PbKJp_UKLHUluYTUBBJTPWIlWuria70KXkKnn3F0AysjnA4kYyHmHiFx6iuOP0QrNCOIt_WcE5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-[#F8FAFC] leading-tight tracking-tight">WallCraft</span><span class="font-label-sm text-label-sm text-[#7C5CFC] uppercase tracking-wider font-bold">Discover</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#171922] border border-white/[0.08] text-[#94A3B8] hover:text-[#7C5CFC] hover:border-[#7C5CFC]/40 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full bg-[#171922] border border-white/[0.08] text-[#94A3B8] hover:text-[#7C5CFC] hover:border-[#7C5CFC]/40 transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Account" class="w-11 h-11 flex items-center justify-center rounded-full ring-1 ring-white/[0.1] hover:ring-2 hover:ring-[#7C5CFC]/50 transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMBpyAYtdX1fIKYHnOTYxHjA5HK1CuJ3_Jd5k9VXSAgpCcC_PfARZ_XjJRUEXGVrYG6bApj0RBeGjutWXKBdd9VInQ5GfRzlIYmEdvNA35s9x0ZrMTeMv49emhn0Vr1MifVPmVs72e9ZlK0O7EMULr5dERssa5kXOtuRCDGbZn7nSaCMrXNQ8qsZkYOebswA-ygqqjZpOWaYgDrPEp5sA0zOlYgdEV_md2Q4jPY4"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-[#0B0C10] flex-1"><div class="flex flex-col w-full pb-6">
+<!-- Search & Filter Controls Header -->
+<section class="flex flex-col gap-space-sm px-margin pt-space-md">
+<!-- Active Search Bar -->
+<div class="relative flex items-center w-full bg-[#171922] border border-white/[0.08] rounded-full h-12 px-space-md shadow-inner transition-all focus-within:border-[#7C5CFC]/60 focus-within:ring-2 focus-within:ring-[#7C5CFC]/20">
+<span class="material-symbols-outlined text-[#7C5CFC] text-[22px] mr-space-xs shrink-0">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none min-w-0" id="search-input" placeholder="Search 4K wallpapers..." type="text" value="Cyberpunk neon fantasy space"/>
+<button aria-label="Clear query" class="w-7 h-7 flex items-center justify-center rounded-full bg-[#262B3A] border border-white/[0.08] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#33353b] transition-colors shrink-0 ml-space-xs" id="clear-search-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Filter Chips Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="chip-filter shrink-0 h-9 px-4 rounded-full bg-[#7C5CFC] text-white font-label-md text-label-md flex items-center gap-1.5 shadow-lg shadow-[#7C5CFC]/25 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+        Cyberpunk
+      </button>
+<button class="chip-filter shrink-0 h-9 px-4 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#262B3A] font-label-md text-label-md transition-colors" type="button">
+        Neon Pink
+      </button>
+<button class="chip-filter shrink-0 h-9 px-4 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#262B3A] font-label-md text-label-md transition-colors" type="button">
+        OLED Black
+      </button>
+<button class="chip-filter shrink-0 h-9 px-4 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#262B3A] font-label-md text-label-md transition-colors" type="button">
+        Minimalist
+      </button>
+<button class="chip-filter shrink-0 h-9 px-4 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#262B3A] font-label-md text-label-md transition-colors" type="button">
+        Vaporwave
+      </button>
+</div>
+</section>
+<!-- Empty State Delightful Canvas -->
+<section class="flex flex-col items-center text-center px-margin mt-space-lg mb-space-xl">
+<!-- Visual Centerpiece: Glowing High-Tech 404 Radar -->
+<div class="relative flex items-center justify-center w-40 h-40 mb-space-md">
+<!-- Ambient Glow Aura -->
+<div class="absolute inset-0 bg-[#7C5CFC]/20 rounded-full blur-2xl transform scale-125 pointer-events-none"></div>
+<!-- Radar Concentric Rings -->
+<div class="absolute inset-0 rounded-full border border-[#7C5CFC]/30 animate-pulse"></div>
+<div class="absolute inset-2 rounded-full border border-white/[0.06]"></div>
+<div class="absolute inset-3 rounded-full bg-[#171922] border border-white/[0.08] flex items-center justify-center shadow-2xl">
+<!-- Floating Abstract Hologram Graphic -->
+<div class="w-24 h-24 rounded-full bg-gradient-to-tr from-[#1D212D] via-[#262B3A] to-[#171922] border border-[#7C5CFC]/30 flex flex-col items-center justify-center shadow-lg relative overflow-hidden">
+<span class="material-symbols-outlined text-[#7C5CFC] text-[42px] drop-shadow-[0_0_12px_rgba(124,92,252,0.8)] mb-1">satellite_alt</span>
+<!-- Soft scanning line -->
+<div class="absolute inset-x-0 h-[2px] bg-[#7C5CFC] blur-[1px] top-1/2 -translate-y-1/2 animate-bounce opacity-70"></div>
+</div>
+</div>
+<!-- Playful Floating 404 Status Badge -->
+<div class="absolute -top-1 right-2 bg-[#7C5CFC] text-white font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-[0_2px_10px_rgba(124,92,252,0.5)] flex items-center gap-1 border border-white/20">
+<span class="w-1.5 h-1.5 rounded-full bg-[#5de6ff] animate-ping"></span>
+        404
+      </div>
+</div>
+<!-- Typography Stack -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-[#F8FAFC] mb-space-xs tracking-tight">
+      No Wallpapers Found
+    </h2>
+<p class="font-body-md text-body-md text-[#94A3B8] max-w-xs mx-auto leading-relaxed">
+      We couldn't find any 4K wallpapers matching your criteria. Try adjusting keywords, removing filters, or conjure one with AI.
+    </p>
+<!-- Primary & Secondary Interactive Action CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch w-full max-w-xs gap-space-sm mt-space-lg">
+<button class="h-12 px-6 rounded-full bg-[#7C5CFC] hover:bg-[#6b47fb] text-white font-label-lg text-label-lg shadow-lg shadow-[#7C5CFC]/30 active:scale-95 transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+        Explore Trending
+      </button>
+<button class="h-12 px-6 rounded-full bg-[#7C5CFC]/15 hover:bg-[#7C5CFC]/25 text-[#ccbeff] border border-[#7C5CFC]/40 font-label-lg text-label-lg active:scale-95 transition-all flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#7C5CFC]" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+        Generate with AI
+      </button>
+</div>
+</section>
+<!-- Suggested & Trending Searches Section -->
+<section class="flex flex-col gap-space-md px-margin">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#7C5CFC] text-[20px]">trending_up</span>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC]">Trending Searches</h3>
+</div>
+<span class="font-label-sm text-label-sm text-[#7C5CFC] uppercase font-bold tracking-wider">Top Picks</span>
+</div>
+<!-- Quick Pill Keyword Tags -->
+<div class="flex flex-wrap gap-2">
+<button class="suggested-chip px-3.5 py-1.5 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#F8FAFC] hover:text-white hover:border-[#7C5CFC]/60 hover:bg-[#262B3A] font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#7C5CFC]">search</span>
+        Cyberpunk City
+      </button>
+<button class="suggested-chip px-3.5 py-1.5 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#F8FAFC] hover:text-white hover:border-[#7C5CFC]/60 hover:bg-[#262B3A] font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#7C5CFC]">search</span>
+        OLED Minimalist
+      </button>
+<button class="suggested-chip px-3.5 py-1.5 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#F8FAFC] hover:text-white hover:border-[#7C5CFC]/60 hover:bg-[#262B3A] font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#7C5CFC]">search</span>
+        Deep Space Nebula
+      </button>
+<button class="suggested-chip px-3.5 py-1.5 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#F8FAFC] hover:text-white hover:border-[#7C5CFC]/60 hover:bg-[#262B3A] font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#7C5CFC]">search</span>
+        Anime Sunset
+      </button>
+<button class="suggested-chip px-3.5 py-1.5 rounded-full bg-[#1D212D] border border-white/[0.08] text-[#F8FAFC] hover:text-white hover:border-[#7C5CFC]/60 hover:bg-[#262B3A] font-label-md text-label-md transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#7C5CFC]">search</span>
+        Bioluminescent Ocean
+      </button>
+</div>
+<!-- Mini Visual Preview Cards of Popular Styles -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<h4 class="font-label-md text-label-md text-[#94A3B8]">Popular Aesthetic Galleries</h4>
+<div class="grid grid-cols-3 gap-gutter">
+<!-- Card 1: Cyberpunk -->
+<div class="group relative rounded-xl overflow-hidden bg-[#171922] border border-white/[0.08] shadow-sm flex flex-col aspect-[4/5] transition-transform active:scale-95">
+<img alt="Cyberpunk Aesthetic Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Futuristic neon Tokyo cyberpunk cityscape with vibrant purple and cyan volumetric fog, high rise skyscrapers with glowing digital billboards, reflections in wet asphalt 4k phone wallpaper style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCpHnC-MnraTfe7lomXhwkRrEWEjP9x7KJqmDsmjMHR0fnVNTkHslUdAJwLz_KFH4ASSver1seWEc_9PF-_qPArM8hXRm8xTv0I5WQcMruhbXb-5fDRw7u9C9jHwo9o7eWgwB9lqwpFBDgiCAdNJBX98ozFZLJDd01-1D0irMO0C6s1pfUk1y14s5KbQnTOMux5c8DOrCROxiKm3EpW4LeuYYQiL-xCyQQwfw1IQQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/90 via-[#0B0C10]/30 to-transparent flex flex-col justify-end p-2.5">
+<span class="font-label-sm text-label-sm text-white font-bold truncate">Cyber City</span>
+<span class="text-[10px] text-[#ccbeff] leading-none">1.4k+ items</span>
+</div>
+</div>
+<!-- Card 2: Deep Space -->
+<div class="group relative rounded-xl overflow-hidden bg-[#171922] border border-white/[0.08] shadow-sm flex flex-col aspect-[4/5] transition-transform active:scale-95">
+<img alt="Deep Space Nebula Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Cinematic deep space nebula filled with cosmic purple stardust, glowing cyan celestial clusters, glowing planetary rings in crisp high dynamic range 4k resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSVLamaotpWplyQJTlVlZCHmAzPicbhlQXTjyzpM0PYTi4C355Ys45fennV0wV-w9OuHCalzDzvOJmIV1k5KaXD3gX70IUW2iZolncISjywL1rDupqde5t7pq8gxUyMdHGHD14QZrIK6TmVfL41lUE_C12AkDj8pnwIJlt9vWGX23CHYteRJs3Tj3Zfi3gos5M0FqGNeXY1rIVvUPNOnahrdRfnIDVuhyYOkziLq0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/90 via-[#0B0C10]/30 to-transparent flex flex-col justify-end p-2.5">
+<span class="font-label-sm text-label-sm text-white font-bold truncate">Cosmic Rift</span>
+<span class="text-[10px] text-[#ccbeff] leading-none">890 items</span>
+</div>
+</div>
+<!-- Card 3: Neon Abstract -->
+<div class="group relative rounded-xl overflow-hidden bg-[#171922] border border-white/[0.08] shadow-sm flex flex-col aspect-[4/5] transition-transform active:scale-95">
+<img alt="OLED Minimalist Flow Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Minimalist OLED black background with smooth iridescent 3D fluid ribbons floating in ultraviolet and electric violet lighting, smooth velvet texture and specular reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn13VVUju0SY3PRYqXlv6t5PAxU6M13lU_K74G2lGpvL3T9f4A0jzFif79UhUcMiYBVAoCukNTQJ2vqjgwrJArtcfpkMb-FEjmudMFBXHQkw01rdlVYNLKyXiW9fElYtixztD6DsqWLx0My5_x71s3j_gKnM6uueZvtlCqFrcy9fpCNx9eyo1CxIRap5NS8uRX9vG1QKTD6jL45zhQazbO8CbK1Dq0Nn0XGHaG3Yk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/90 via-[#0B0C10]/30 to-transparent flex flex-col justify-end p-2.5">
+<span class="font-label-sm text-label-sm text-white font-bold truncate">OLED Flow</span>
+<span class="text-[10px] text-[#ccbeff] leading-none">2.1k items</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interaction for chip toggling and search clear
+  const clearBtn = document.getElementById('clear-search-btn');
+  const searchInput = document.getElementById('search-input');
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchInput.focus();
+    });
+  }
+
+  // Populate search input when suggested chips are tapped
+  document.querySelectorAll('.suggested-chip').forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      const text = chip.textContent.trim().replace(/^search/, '').trim();
+      if (searchInput) {
+        searchInput.value = text;
+        searchInput.focus();
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#111319]/90 backdrop-blur-xl border-t border-white/[0.08] shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="[&amp;_.tab-indicator]:bg-[#7C5CFC] [&amp;_.tab-indicator]:text-white [&amp;_.tab-label]:text-[#7C5CFC] [&amp;_.tab-label]:font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-[#94A3B8] hover:text-[#7C5CFC] transition-colors [&amp;_.tab-indicator]:bg-[#7C5CFC] [&amp;_.tab-indicator]:text-white [&amp;_.tab-label]:text-[#7C5CFC] [&amp;_.tab-label]:font-label-md" data-path="discover" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-[#7C5CFC] text-white shadow-md shadow-[#7C5CFC]/30"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors text-[#7C5CFC] font-semibold">Discover</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-[#94A3B8] hover:text-[#7C5CFC] transition-colors" data-path="categories" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">grid_view</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Categories</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-[#94A3B8] hover:text-[#7C5CFC] transition-colors" data-path="generator" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bolt</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Generator</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-[#94A3B8] hover:text-[#7C5CFC] transition-colors" data-path="saved" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bookmark</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Saved</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-[#94A3B8] hover:text-[#7C5CFC] transition-colors" data-path="profile" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">person</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Profile</span></a></div></nav></body></html>

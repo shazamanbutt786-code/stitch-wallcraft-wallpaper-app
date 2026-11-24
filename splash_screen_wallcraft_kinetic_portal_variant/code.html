@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>WallCraft Splash - Kinetic Portal Edition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@200..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              violet: '#7C5CFC',
+              cyan: '#38BDF8',
+              magenta: '#E879F9',
+              teal: '#2DD4BF',
+              void: '#05060A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes vortexRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes counterRotate {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes portalPulse {
+      0%, 100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 25px rgba(124, 92, 252, 0.45)); }
+      50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 45px rgba(56, 189, 248, 0.65)); }
+    }
+    @keyframes floatShard1 {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+      50% { transform: translate3d(-6px, -14px, 0) rotate(-3deg); }
+    }
+    @keyframes floatShard2 {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(8deg); }
+      50% { transform: translate3d(8px, -12px, 0) rotate(12deg); }
+    }
+    @keyframes floatShard3 {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(-10deg); }
+      50% { transform: translate3d(4px, 10px, 0) rotate(-7deg); }
+    }
+    @keyframes floatShard4 {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(14deg); }
+      50% { transform: translate3d(-5px, 8px, 0) rotate(10deg); }
+    }
+    @keyframes shimmerStream {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+    @keyframes tapGlow {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+
+    .vortex-spin {
+      animation: vortexRotate 22s linear infinite;
+    }
+    .vortex-spin-fast {
+      animation: vortexRotate 14s linear infinite;
+    }
+    .counter-spin {
+      animation: counterRotate 28s linear infinite;
+    }
+    .portal-pulse {
+      animation: portalPulse 4s ease-in-out infinite;
+    }
+    .shard-1 {
+      animation: floatShard1 5s ease-in-out infinite;
+    }
+    .shard-2 {
+      animation: floatShard2 6s ease-in-out infinite 0.7s;
+    }
+    .shard-3 {
+      animation: floatShard3 5.4s ease-in-out infinite 1.2s;
+    }
+    .shard-4 {
+      animation: floatShard4 6.2s ease-in-out infinite 0.4s;
+    }
+    .shimmer-track {
+      animation: shimmerStream 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .tap-beacon {
+      animation: tapGlow 2.8s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#030408] text-white antialiased font-sans flex items-center justify-center min-h-screen select-none overflow-hidden m-0 p-0">
+<!-- Mobile Screen Container -->
+<div class="relative w-full max-w-[412px] h-[892px] max-h-screen bg-[#07080F] flex flex-col justify-between overflow-hidden shadow-2xl border border-white/[0.08] sm:rounded-[48px]">
+<!-- Generative Atmospheric Background & Cosmic Void Portal Lights -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<!-- Deep Cosmic Nebula Top -->
+<div class="absolute -top-32 -left-20 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#7C5CFC]/25 via-[#E879F9]/15 to-transparent blur-[100px]"></div>
+<!-- Cyan Core Hyper-drive Glow -->
+<div class="absolute top-[34%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-[#38BDF8]/20 blur-[90px] portal-pulse"></div>
+<!-- Magenta Bottom Ambient -->
+<div class="absolute -bottom-28 right-[-10%] w-[380px] h-[360px] rounded-full bg-gradient-to-tl from-[#E879F9]/20 via-[#7C5CFC]/15 to-transparent blur-[95px]"></div>
+<!-- Cyber Coordinate Matrix Grid -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:28px_28px] opacity-60"></div>
+<!-- Diagonal Specular Beam Accent -->
+<div class="absolute -top-[20%] right-[-30%] w-[180px] h-[130%] bg-gradient-to-b from-white/[0.04] via-transparent to-transparent rotate-[32deg] pointer-events-none"></div>
+<!-- Floating Cosmic Dust Specks -->
+<div class="absolute top-[28%] left-[12%] w-1.5 h-1.5 rounded-full bg-[#38BDF8] shadow-[0_0_8px_#38BDF8] animate-pulse"></div>
+<div class="absolute top-[48%] right-[14%] w-1.5 h-1.5 rounded-full bg-[#E879F9] shadow-[0_0_8px_#E879F9]"></div>
+<div class="absolute top-[64%] left-[22%] w-1 h-1 rounded-full bg-white/70"></div>
+<div class="absolute top-[20%] right-[24%] w-1 h-1 rounded-full bg-[#7C5CFC] shadow-[0_0_6px_#7C5CFC] animate-ping"></div>
+</div>
+<!-- 1. Native Mobile Status Bar Header -->
+<header class="relative z-20 pt-3.5 px-7 flex items-center justify-between text-white select-none">
+<!-- Time -->
+<div class="font-sans font-semibold text-[15px] tracking-tight">9:41</div>
+<!-- Dynamic Island / Sensor Notch Pill Representation -->
+<div class="w-24 h-5 rounded-full bg-black/60 border border-white/[0.08] backdrop-blur-md flex items-center justify-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="text-[9px] font-display font-medium tracking-wider text-slate-300 uppercase">WallCraft</span>
+</div>
+<!-- Telemetry Icons: Signal, 5G, Battery -->
+<div class="flex items-center gap-2 text-slate-300">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.54-.5 2.97-1.35 4.14L12 19.64l-5.65-3.5C5.5 14.97 5 13.54 5 12c0-3.87 3.13-7 7-7z"></path>
+</svg>
+<span class="text-[11px] font-display font-bold tracking-wider">5G</span>
+<!-- Battery Pill -->
+<div class="w-5 h-2.5 rounded-[4px] border border-white/60 p-[1.5px] flex items-center">
+<div class="w-full h-full bg-emerald-400 rounded-[1.5px]"></div>
+</div>
+</div>
+</header>
+<!-- 2. Central Dimensional Portal & Holographic Wallpaper Art Shards -->
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 -mt-2">
+<!-- Interactive Kinetic Portal Viewport Stage -->
+<div class="relative w-[310px] h-[310px] flex items-center justify-center">
+<!-- Outer Rotating Celestial Reticle -->
+<svg class="absolute inset-0 w-full h-full vortex-spin opacity-40" fill="none" viewbox="0 0 320 320">
+<circle cx="160" cy="160" r="148" stroke="#7C5CFC" stroke-dasharray="6 14 2 14" stroke-linecap="round" stroke-width="1.2"></circle>
+<circle cx="160" cy="12" fill="#38BDF8" filter="drop-shadow(0 0 6px #38BDF8)" r="3"></circle>
+<circle cx="308" cy="160" fill="#E879F9" filter="drop-shadow(0 0 6px #E879F9)" r="2.5"></circle>
+<circle cx="160" cy="308" fill="#2DD4BF" r="3"></circle>
+<circle cx="12" cy="160" fill="#FFFFFF" r="2"></circle>
+</svg>
+<!-- Inner Counter-Spin Holographic Aperture Rings -->
+<svg class="absolute inset-4 w-[278px] h-[278px] counter-spin opacity-45" fill="none" viewbox="0 0 280 280">
+<circle cx="140" cy="140" r="126" stroke="#38BDF8" stroke-dasharray="32 18 8 18" stroke-width="1.2"></circle>
+<circle cx="140" cy="14" fill="#38BDF8" r="2"></circle>
+<circle cx="266" cy="140" fill="#7C5CFC" r="2"></circle>
+<!-- Nested Tech Ring -->
+<circle cx="140" cy="140" r="98" stroke="rgba(232, 121, 249, 0.5)" stroke-dasharray="14 10 4 10" stroke-width="1"></circle>
+</svg>
+<!-- Dynamic Holographic Glass Art Shards (Showcasing WallCraft curated themes) -->
+<!-- Shard 1: Top-Left Neon Cyberpunk City Glass Card -->
+<div class="shard-1 absolute top-2 left-0 w-24 h-36 rounded-2xl p-[1px] bg-gradient-to-br from-white/40 via-[#38BDF8]/40 to-transparent shadow-[0_8px_32px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden z-20 group">
+<div class="w-full h-full rounded-[15px] bg-[#0A0D18]/90 overflow-hidden relative flex flex-col justify-end p-2 border border-white/10">
+<!-- Shard artwork background representation -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0D1B] via-[#4C1D95]/40 to-[#06B6D4]/30 mix-blend-screen"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#EC4899_0%,transparent_60%)] opacity-60"></div>
+<div class="relative z-10">
+<span class="text-[8px] font-display font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/60 text-[#38BDF8] border border-[#38BDF8]/30">Cyber Neon</span>
+</div>
+</div>
+</div>
+<!-- Shard 2: Top-Right Deep Celestial Nebula Card -->
+<div class="shard-2 absolute top-1 right-1 w-22 h-32 rounded-2xl p-[1px] bg-gradient-to-bl from-white/40 via-[#E879F9]/50 to-transparent shadow-[0_8px_32px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden z-20">
+<div class="w-full h-full rounded-[15px] bg-[#0A0D18]/90 overflow-hidden relative flex flex-col justify-end p-2 border border-white/10">
+<div class="absolute inset-0 bg-gradient-to-br from-[#7C5CFC]/50 via-[#E879F9]/40 to-[#0F172A]"></div>
+<div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-white/20 blur-sm"></div>
+<div class="relative z-10">
+<span class="text-[8px] font-display font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/60 text-[#E879F9] border border-[#E879F9]/30">Nebula 8K</span>
+</div>
+</div>
+</div>
+<!-- Shard 3: Bottom-Left Abstract Liquid Crystal Shard -->
+<div class="shard-3 absolute bottom-3 left-2 w-20 h-28 rounded-2xl p-[1px] bg-gradient-to-tr from-white/40 via-[#2DD4BF]/40 to-transparent shadow-[0_8px_30px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden z-20">
+<div class="w-full h-full rounded-[15px] bg-[#090C16]/90 overflow-hidden relative flex flex-col justify-end p-1.5 border border-white/10">
+<div class="absolute inset-0 bg-gradient-to-tr from-[#0F766E]/50 via-[#2DD4BF]/30 to-[#3B82F6]/40"></div>
+<div class="relative z-10">
+<span class="text-[7.5px] font-display font-bold uppercase tracking-wider px-1 py-0.5 rounded bg-black/60 text-[#2DD4BF] border border-[#2DD4BF]/30">Fluid 3D</span>
+</div>
+</div>
+</div>
+<!-- Shard 4: Bottom-Right Minimal Dark OLED Architecture -->
+<div class="shard-4 absolute bottom-4 right-1 w-24 h-32 rounded-2xl p-[1px] bg-gradient-to-tl from-white/40 via-[#7C5CFC]/40 to-transparent shadow-[0_8px_30px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden z-20">
+<div class="w-full h-full rounded-[15px] bg-[#0B0D17]/90 overflow-hidden relative flex flex-col justify-end p-2 border border-white/10">
+<div class="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#1E1B4B]/70 to-[#6366F1]/30"></div>
+<div class="relative z-10">
+<span class="text-[8px] font-display font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/60 text-purple-300 border border-purple-500/30">OLED Void</span>
+</div>
+</div>
+</div>
+<!-- Center Cosmic Crystalline Prism Core & Vortex Energy Well -->
+<div class="relative z-30 w-36 h-36 flex items-center justify-center">
+<!-- Luminous Radial Corona -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#7C5CFC]/60 via-[#38BDF8]/40 to-[#E879F9]/50 blur-2xl portal-pulse"></div>
+<!-- Glass Hexagonal Containment Halo -->
+<div class="absolute w-32 h-32 rounded-3xl bg-white/[0.03] border border-white/20 backdrop-blur-xl rotate-45 shadow-[inset_0_0_20px_rgba(124,92,252,0.3)]"></div>
+<div class="absolute w-28 h-28 rounded-2xl bg-white/[0.04] border border-cyan-400/30 backdrop-blur-lg -rotate-12"></div>
+<!-- Multi-Faceted 3D Crystal Gateway Emblem -->
+<svg class="relative z-20 w-24 h-24 drop-shadow-[0_12px_28px_rgba(56,189,248,0.5)]" fill="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="coreAura" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FFFFFF"></stop>
+<stop offset="35%" stop-color="#38BDF8"></stop>
+<stop offset="80%" stop-color="#7C5CFC"></stop>
+<stop offset="100%" stop-color="#E879F9"></stop>
+</lineargradient>
+<lineargradient id="facetCyan" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#E0F2FE"></stop>
+<stop offset="60%" stop-color="#0284C7"></stop>
+<stop offset="100%" stop-color="#0369A1"></stop>
+</lineargradient>
+<lineargradient id="facetViolet" x1="100%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#F5D0FE"></stop>
+<stop offset="50%" stop-color="#A855F7"></stop>
+<stop offset="100%" stop-color="#6B21A8"></stop>
+</lineargradient>
+<lineargradient id="facetGlint" x1="0%" x2="100%" y1="50%" y2="50%">
+<stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"></stop>
+</lineargradient>
+</defs>
+<!-- Outer Prism Facets -->
+<polygon fill="#0E1222" points="50,4 88,26 88,74 50,96 12,74 12,26" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"></polygon>
+<!-- Interior Prismatic Shards -->
+<polygon fill="url(#facetViolet)" opacity="0.9" points="50,4 88,26 50,50"></polygon>
+<polygon fill="url(#facetCyan)" opacity="0.85" points="88,26 88,74 50,50"></polygon>
+<polygon fill="url(#coreAura)" opacity="0.95" points="88,74 50,96 50,50"></polygon>
+<polygon fill="url(#facetViolet)" opacity="0.8" points="50,96 12,74 50,50"></polygon>
+<polygon fill="url(#facetCyan)" opacity="0.9" points="12,74 12,26 50,50"></polygon>
+<polygon fill="url(#coreAura)" opacity="0.9" points="12,26 50,4 50,50"></polygon>
+<!-- Central Brilliant Diamond Core -->
+<polygon fill="url(#coreAura)" points="50,22 68,50 50,78 32,50"></polygon>
+<polygon fill="url(#facetGlint)" points="50,22 50,78 32,50"></polygon>
+<!-- Radiance Intersection Lines -->
+<line stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-width="1.2" x1="50" x2="50" y1="4" y2="96"></line>
+<line stroke="rgba(255,255,255,0.5)" stroke-width="0.9" x1="12" x2="88" y1="26" y2="74"></line>
+<line stroke="rgba(255,255,255,0.5)" stroke-width="0.9" x1="12" x2="88" y1="74" y2="26"></line>
+<!-- Center Sparkle Star -->
+<g transform="translate(50,50)">
+<polygon fill="#FFFFFF" points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5"></polygon>
+<circle cx="0" cy="0" fill="#38BDF8" r="1.8"></circle>
+</g>
+</svg>
+</div>
+</div>
+<!-- Typography: Brand Wordmark with luminous crystal dot -->
+<div class="mt-4 flex flex-col items-center text-center">
+<div class="flex items-center justify-center">
+<h1 class="text-[38px] leading-tight font-extrabold tracking-tight text-white font-sans drop-shadow-[0_4px_24px_rgba(124,92,252,0.35)]">
+            Wall<span class="bg-gradient-to-r from-[#A78BFA] via-[#38BDF8] to-[#E879F9] bg-clip-text text-transparent">Craft</span>
+</h1>
+<!-- Dynamic Prismatic Spark Accent on the Wordmark -->
+<span class="inline-block w-2.5 h-2.5 -mt-6 ml-0.5 rounded-full bg-[#38BDF8] shadow-[0_0_10px_#38BDF8] animate-pulse"></span>
+</div>
+<!-- Tagline with luxury letterspacing -->
+<p class="font-display text-[11px] font-semibold tracking-[0.24em] text-slate-300 uppercase mt-1 drop-shadow-sm">
+          Infinite Dimensions • AI-Crafted 8K &amp; 4K OLED
+        </p>
+<!-- Feature Pills Row -->
+<div class="flex items-center gap-1.5 mt-3.5 flex-wrap justify-center">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-[13px] text-[#38BDF8]">auto_awesome</span>
+<span class="text-[10px] font-display font-medium text-slate-200 tracking-wider">Neural Generation</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-[13px] text-[#E879F9]">hdr_on</span>
+<span class="text-[10px] font-display font-medium text-slate-200 tracking-wider">Pro HDR</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-[13px] text-[#2DD4BF]">brightness_empty</span>
+<span class="text-[10px] font-display font-medium text-slate-200 tracking-wider">OLED True Black</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Bottom Interactive Startup Experience & Precision Telemetry Loader -->
+<div class="relative z-20 px-7 pb-8 flex flex-col items-center w-full">
+<!-- High-Precision Telemetry Progress Tracker -->
+<div class="w-full max-w-[320px] flex flex-col gap-2.5 mb-5 bg-[#0C0E1A]/80 border border-white/[0.08] p-3 rounded-2xl backdrop-blur-xl shadow-lg">
+<!-- Status Text & Live Percentage -->
+<div class="flex items-center justify-between text-[11px] font-display tracking-wider">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#38BDF8] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#38BDF8]"></span>
+</span>
+<span class="text-slate-300 font-medium">Initializing neural canvas...</span>
+</div>
+<span class="font-bold text-[#38BDF8] tabular-nums">84%</span>
+</div>
+<!-- Multi-Segmented Telemetry Bar -->
+<div class="grid grid-cols-12 gap-1 w-full h-1.5 py-0">
+<div class="h-full rounded-full bg-gradient-to-r from-[#7C5CFC] to-[#38BDF8] shadow-[0_0_6px_#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8] shadow-[0_0_6px_#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]"></div>
+<div class="h-full rounded-full bg-[#38BDF8]/90"></div>
+<!-- Remaining unfilled segments -->
+<div class="h-full rounded-full bg-white/[0.12] relative overflow-hidden">
+<div class="absolute inset-0 bg-white/40 shimmer-track"></div>
+</div>
+<div class="h-full rounded-full bg-white/[0.08]"></div>
+</div>
+<!-- Telemetry Details Sub-row -->
+<div class="flex items-center justify-between text-[9px] font-display uppercase tracking-widest text-slate-300">
+<span>Latent Model: SDXL-v3.4</span>
+<span>Buffer: 120Hz Sync</span>
+</div>
+</div>
+<!-- Interactive "Tap to Enter" Button / Prompt -->
+<button class="tap-beacon w-full max-w-[320px] py-3 rounded-2xl bg-gradient-to-r from-[#7C5CFC]/30 via-white/[0.08] to-[#38BDF8]/30 border border-white/20 hover:border-white/40 backdrop-blur-xl flex items-center justify-center gap-2 shadow-[0_4px_24px_rgba(124,92,252,0.25)] active:scale-[0.98] transition-transform">
+<span class="text-xs font-display font-semibold tracking-widest uppercase text-white">Tap to Enter Experience</span>
+<span class="material-symbols-outlined text-sm text-[#38BDF8]">arrow_forward</span>
+</button>
+<!-- Brand Signature -->
+<div class="mt-4 flex items-center gap-2 text-[10px] font-display tracking-widest text-slate-300 uppercase">
+<span class="w-1 h-1 rounded-full bg-[#7C5CFC]"></span>
+<span>Studio Edition • Curated Wallpaper Engine</span>
+<span class="w-1 h-1 rounded-full bg-[#38BDF8]"></span>
+</div>
+<!-- iOS Native Home Indicator Bar -->
+<div class="w-36 h-1 bg-white/25 rounded-full mt-4"></div>
+</div>
+</div>
+</body></html>

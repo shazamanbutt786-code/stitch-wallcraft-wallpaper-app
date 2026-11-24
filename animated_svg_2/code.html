@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_SVG_START:ANIMATION_69 class="fixed inset-0 w-full h-full" --><div class="fixed inset-0 w-full h-full" id="animated-svg-ANIMATION_69" style="display:block;"><svg fill="none" height="48" viewbox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Micro Linear Gradient along the spinner track -->
+<lineargradient id="microTrackGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#7C5CFC" stop-opacity="0"></stop>
+<stop offset="40%" stop-color="#7C5CFC" stop-opacity="0.3"></stop>
+<stop offset="75%" stop-color="#38BDF8" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#67E8F9" stop-opacity="1"></stop>
+</lineargradient>
+<!-- Subtle glow for dark and light backgrounds -->
+<filter height="160%" id="microGlow" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="1.5"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<style>
+      @keyframes microSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes microPulseCore {
+        0%, 100% { transform: scale(0.85); opacity: 0.7; }
+        50% { transform: scale(1.15); opacity: 1; }
+      }
+      @keyframes microDash {
+        0% { stroke-dashoffset: 105; }
+        50% { stroke-dashoffset: 25; }
+        100% { stroke-dashoffset: 105; }
+      }
+
+      .micro-spinner-rotator {
+        transform-origin: 24px 24px;
+        animation: microSpin 0.85s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      }
+      .micro-spinner-arc {
+        stroke-dasharray: 100;
+        animation: microDash 1.7s ease-in-out infinite;
+      }
+      .micro-crystal-core {
+        transform-origin: 24px 24px;
+        animation: microPulseCore 1.2s ease-in-out infinite;
+      }
+    </style>
+</defs>
+<!-- Muted Background Track for Pull-to-Refresh & Button feedback -->
+<circle cx="24" cy="24" r="18" stroke="currentColor" stroke-opacity="0.15" stroke-width="3"></circle>
+<!-- High-Precision Animated Ring Track -->
+<g class="micro-spinner-rotator" filter="url(#microGlow)">
+<circle class="micro-spinner-arc" cx="24" cy="24" r="18" stroke="url(#microTrackGrad)" stroke-linecap="round" stroke-width="3.5"></circle>
+<!-- Leading Spark Glint Particle -->
+<circle cx="42" cy="24" fill="#FFFFFF" opacity="0.95" r="2"></circle>
+</g>
+<!-- Iconic Mini Faceted Crystal Center (WallCraft signature) -->
+<g class="micro-crystal-core" filter="url(#microGlow)">
+<polygon fill="#7C5CFC" opacity="0.9" points="24,17 29,22 27,29 24,31 21,29 19,22" stroke="#38BDF8" stroke-linejoin="round" stroke-width="0.8"></polygon>
+<polygon fill="#FFFFFF" opacity="0.9" points="24,17 26,22 24,25 22,22"></polygon>
+<polygon fill="#38BDF8" opacity="0.8" points="24,25 27,22 29,22 27,29 24,31"></polygon>
+</g>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_69 -->
+</body>
+</html>

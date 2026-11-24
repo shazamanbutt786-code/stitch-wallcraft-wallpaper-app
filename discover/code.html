@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#4412d1", "inverse-surface": "#2f3133", "primary-fixed-dim": "#c8bfff", "surface-bright": "#f9f9fc", "on-primary": "#ffffff", "on-surface-variant": "#484555", "surface-tint": "#5c3be8", "on-secondary-fixed": "#341100", "on-primary-fixed": "#1a0063", "tertiary-container": "#157d44", "surface-variant": "#e2e2e5", "secondary-fixed": "#ffdbcb", "error": "#ba1a1a", "primary-fixed": "#e5deff", "on-tertiary": "#ffffff", "primary-container": "#6b4df7", "error-container": "#ffdad6", "tertiary": "#006232", "outline-variant": "#c9c4d8", "surface-container-low": "#f3f3f6", "on-secondary-container": "#742e00", "on-tertiary-fixed-variant": "#005229", "on-secondary-fixed-variant": "#793100", "surface-dim": "#dadadc", "inverse-on-surface": "#f0f0f3", "tertiary-fixed": "#97f7b1", "on-tertiary-container": "#bfffcc", "secondary": "#994614", "primary": "#522dde", "on-error": "#ffffff", "surface-container-high": "#e8e8ea", "on-error-container": "#93000a", "surface": "#f9f9fc", "surface-container": "#eeeef0", "background": "#f9f9fc", "on-tertiary-fixed": "#00210d", "tertiary-fixed-dim": "#7cda96", "on-secondary": "#ffffff", "on-surface": "#1a1c1e", "on-primary-container": "#f2edff", "surface-container-highest": "#e2e2e5", "inverse-primary": "#c8bfff", "on-background": "#1a1c1e", "surface-container-lowest": "#ffffff", "outline": "#787587", "secondary-container": "#ff955d", "secondary-fixed-dim": "#ffb691" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xs": "0.25rem", "space-2xl": "3rem", "margin": "1.25rem", "margin-lg": "2.5rem", "margin-sm": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "gutter": "1rem", "gutter-lg": "1.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "space-lg": "1.5rem", "space-xl": "2rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="WallCraft Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAIAWmr6XIZAqDkwKZWyAJIY6ekynQvyp-A1OAlavT9xoZHMiMLq197M87AmL6QL1_6WZeuligdNgD7gU1B2UivN1vOvi2EfQnuG0L9FlbPh8uyK065oJVVw58Z1mqpbxeANLlAC9qKuMRZMPdedvSQP27UniJP13PbKJp_UKLHUluYTUBBJTPWIlWuria70KXkKnn3F0AysjnA4kYyHmHiFx6iuOP0QrNCOIt_WcE5"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">WallCraft</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Discover</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Account" class="w-11 h-11 flex items-center justify-center rounded-full hover:ring-2 hover:ring-primary/20 transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMBpyAYtdX1fIKYHnOTYxHjA5HK1CuJ3_Jd5k9VXSAgpCcC_PfARZ_XjJRUEXGVrYG6bApj0RBeGjutWXKBdd9VInQ5GfRzlIYmEdvNA35s9x0ZrMTeMv49emhn0Vr1MifVPmVs72e9ZlK0O7EMULr5dERssa5kXOtuRCDGbZn7nSaCMrXNQ8qsZkYOebswA-ygqqjZpOWaYgDrPEp5sA0zOlYgdEV_md2Q4jPY4"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Search Bar Section -->
+<div class="px-margin-sm pt-space-sm pb-space-xs">
+<div class="relative flex items-center w-full h-12 bg-surface-container-low rounded-full px-space-md shadow-sm transition-all focus-within:bg-surface-container-lowest focus-within:shadow-md">
+<span class="material-symbols-outlined text-outline text-[22px] mr-space-xs select-none">search</span>
+<input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-outline truncate" placeholder="Search 4K Ultra HD wallpapers and AI prompts" type="text"/>
+<div class="flex items-center gap-space-2xs ml-space-xs">
+<button aria-label="Voice Search" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">mic</span>
+</button>
+<button aria-label="Filters" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Editor's Choice Carousel -->
+<div class="flex flex-col pt-space-sm pb-space-md">
+<div class="flex items-center justify-between px-margin-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Editor's Choice Packs</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-0.5 transition-colors" href="#">
+        Browse all
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Swipe Strip -->
+<div class="flex gap-gutter-sm overflow-x-auto px-margin-sm no-scrollbar pb-space-2xs snap-x snap-mandatory">
+<!-- Card 1: Cybernetic Fauna -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-lowest shadow-md snap-start group cursor-pointer transition-transform active:scale-[0.98]">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Luminescent cybernetic leopard glowing with vibrant neon violet and amber circuits against a futuristic dark carbon-fiber biomechanical jungle, 8k resolution, cinematic lighting, ultra-detailed sleek digital wallpaper render." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbNjlUukz_RsjGRBX2MouY8UMFuYHgWAS5FWNiWMVOzfhcMifstGJRAOCRiOzAc6sY4JGHqfRcqy_OW1votiCwqNILkqqimV-nUkv2cyt5SesDVT729wISZbaw3u9NZ7cnGyyvnK-FKfSKsXn0qJbV4Nt43dYdBRB0btUteNR7jnPpDZkspwkPNQjAoutKVkwDTXnIv3GSPmTgtx7rn2XbPvdu1z-e9Gmt-CSObEs')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-black/30"></div>
+<span class="absolute top-space-xs left-space-xs px-2 py-0.5 rounded-lg bg-inverse-surface/70 backdrop-blur-md text-on-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">stars</span>
+            Pro Tier
+          </span>
+<span class="absolute bottom-space-xs right-space-xs px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            45 Wallpapers
+          </span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Cybernetic Fauna</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bionic wildlife in neon luminescence</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Solitude in Snow -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-lowest shadow-md snap-start group cursor-pointer transition-transform active:scale-[0.98]">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist solitary alpine mountain peak smothered in pristine untouched powdered snow under a soft lavender and cyan dawn sky, serene calm atmosphere, ultra-wide crisp landscape wallpaper." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCONCad7iQBpvTgbr7ZS-33WPF3Ga5jRCb-EkjiEswZfE7xKm7vW8Ko36kfC_OefLNNrT_EM4L8YazMGwqw1eS0Gg8xsbs6systdTHZKESYE0g20YjBJoWkCaUbMeQBIPZtEmSnZ38k4KJupJMisHbVJWJ10wmWqa4eCfYm4fBt9cNaUO7DUXF5fxN5iG2AXq5BgvubbvHcwA5UZblzYop4fKtXtt7wxjUeICeZ_tE')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-black/30"></div>
+<span class="absolute top-space-xs left-space-xs px-2 py-0.5 rounded-lg bg-tertiary-container/90 backdrop-blur-md text-on-tertiary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">arrow_back_ios_new</span>
+            New
+          </span>
+<span class="absolute bottom-space-xs right-space-xs px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            30 Wallpapers
+          </span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Solitude in Snow</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Crisp sub-zero mountain serenity</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Retro Synthwave -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-lowest shadow-md snap-start group cursor-pointer transition-transform active:scale-[0.98]">
+<div class="relative h-40 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Retro 80s synthwave vector grid wireframe highway leading into a massive glowing magenta electric wire sun with palm silhouettes and neon grid reflections, vintage electronic art aesthetic wallpaper." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQROwNxd6E2IXQrIwpNSAkGqDbApbntSk0gjK1W5lM3gFr9-RY5RDQ7HGNLqiGnQPYzvZRDHaUA0aCYPVIWkXMSs3IOOita74Rr3yua0lt5iOCFXAQ95OZzXpp87T0k99QJU_oCpUzZUKwPQ604VVDayZhP0z1pj0McvhZ8irSJ9eA1fhBYzbW-EhNnnakvKYFTgVuN3SQXZa0Tp3tCTwuB_Kk7ntkQgiCJldNxk0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-black/30"></div>
+<span class="absolute top-space-xs left-space-xs px-2 py-0.5 rounded-lg bg-secondary/90 backdrop-blur-md text-on-secondary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+            Popular
+          </span>
+<span class="absolute bottom-space-xs right-space-xs px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            60 Wallpapers
+          </span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Retro Synthwave</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Electrifying 80s dreamscapes</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Chips Horizontal Scroll -->
+<div class="py-space-xs">
+<div class="flex gap-space-xs overflow-x-auto px-margin-sm no-scrollbar items-center">
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_12px_rgba(107,77,247,0.25)] flex items-center gap-1.5 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+        Trending
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95" type="button">
+        AMOLED
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95" type="button">
+        AI Generated
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95" type="button">
+        Abstract
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95" type="button">
+        Nature
+      </button>
+<button class="flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95" type="button">
+        Minimalist
+      </button>
+</div>
+</div>
+<!-- Daily Featured Collections -->
+<section class="flex flex-col pt-space-lg px-margin-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Daily Featured</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+          1,240
+        </span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-0.5 transition-colors" href="#">
+        See all
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Wallpaper Cards Masonry-style 2-column Grid -->
+<div class="grid grid-cols-2 gap-gutter-sm">
+<!-- Item 1: Neon Cyberpunk Cityscapes -->
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-surface-container group shadow-sm transition-transform active:scale-[0.98]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sprawling futuristic cyberpunk metropolis drenched in rain at night with towering holographic vertical billboards in electric cyan and magenta, reflective puddles, high contrast moody aesthetic 9:16 mobile wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVarRCMEFfAlbPddPgmy7TfbgFwGHn35hYEz_BFcsALZ_5-i9PK9lYNEd8gtZKygVJet22oqXzpujV50dl_NvSn302DIdPyUXTqhzxaglmsJ5JzGA3J4ddELDZY25u1LZgi3bUQGa1jiKOwIuKDrODlLhzy7MhMo2xeaNYNkMw99s-ieBgxYTRaFXcwy9jErHOqkNMtaxNxaVEweHZww0OHUxTLPNsPdou4UthVA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent"></div>
+<div class="absolute top-space-xs left-space-xs flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface/60 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            4K UHD
+          </span>
+</div>
+<div class="absolute bottom-space-xs inset-x-space-xs flex flex-col gap-1">
+<h5 class="font-headline-sm text-headline-sm text-on-primary truncate">Neon Cyberpunk</h5>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_size_select_actual</span>
+              Cityscapes
+            </span>
+<button aria-label="Favorite" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary flex items-center justify-center shadow-md active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Ethereal Pastel Skies -->
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-surface-container group shadow-sm transition-transform active:scale-[0.98]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dreamy surreal cloudscape with fluffy candy-floss cotton clouds illuminated by soft pastel peach and periwinkle sunset hues, celestial golden crescent moon shining softly in an ethereal twilight sky wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe3y3iv54tFTLxkyqUUoORnIofFBnfofq7_-eaviZvzO1-QDUDOgiCEGpzQRTrcOQCILvneKtlrp63wphZi1rYtIHAH2lZKfEBB4AQ-xNy30Lkj7u5nUQW8dp8EhR__xpDt_wVYbNPYEyDOPNH0XKQRCgcE7bcczVqsZDq7XVpBJS_JJq0KVA41mN48-3X9pFDd8hnfmSKC2hZ7pCPon7vYugJn-TOkG4fIyqdp8s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent"></div>
+<div class="absolute top-space-xs left-space-xs flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface/60 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            4K
+          </span>
+</div>
+<div class="absolute bottom-space-xs inset-x-space-xs flex flex-col gap-1">
+<h5 class="font-headline-sm text-headline-sm text-on-primary truncate">Ethereal Skies</h5>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud</span>
+              Pastels
+            </span>
+<button aria-label="Favorite" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-outline hover:text-secondary flex items-center justify-center shadow-md active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Minimalist Architecture -->
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-surface-container group shadow-sm transition-transform active:scale-[0.98]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Brutalist architectural concrete facade with sweeping curves casting sharp dramatic diagonal shadows under a spotless azure sky, clean graphic lines, modern architectural minimalism wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMcQvMR95MMA_D-HrcFrBNqDkd9gprHqp8WwAkA6h2XKMqNk-h_JKjGsH1hGvZuUOaTyMMNGh4r7dvdOni5tetnPUP8p4p6Mxhl5M4A32Onf68--JF-8gag24cKuMfKbD0xsbX58ncgDWBfpnYGp0Z4Vpl0upghIMFOaWTgp7oJHUIx9nwdgLvUq5ywhA5YPfcqBXTyepxS1Ln9LrRgK2EcABcmjYdagM93hPjot8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent"></div>
+<div class="absolute top-space-xs left-space-xs flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface/60 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            UHD
+          </span>
+</div>
+<div class="absolute bottom-space-xs inset-x-space-xs flex flex-col gap-1">
+<h5 class="font-headline-sm text-headline-sm text-on-primary truncate">Clean Brutalism</h5>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">apartment</span>
+              Minimalist
+            </span>
+<button aria-label="Favorite" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-outline hover:text-secondary flex items-center justify-center shadow-md active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Deep Ocean Bioluminescence -->
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-surface-container group shadow-sm transition-transform active:scale-[0.98]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Ethereal deep underwater abyss with luminous bioluminescent jellyfish glowing in translucent electric cyan and ultraviolet gradients, drifting majestically through abyssal darkness wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWEavOIP5cXZSEHSTrdVVhyi1MwkC-BNSIwCqlZLXAXCi3Jo1RewF3TCYYWaAuswNV-zJkrtQHSm2-8-yvTQmVX60vwy7etkvBF1i6aYxjsW-t-eyb6InMbZIovPxyPk7ymVUqNs8v5mP6-jgyI0XSwER63ilMOwKokMyvsNPu7WtebmlrRt38BoSJWrrrUgFoRn03fFMMRzWiw6IECzkrKs-7SRpsYvLUZxoFc8c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent"></div>
+<div class="absolute top-space-xs left-space-xs flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface/60 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            4K UHD
+          </span>
+</div>
+<div class="absolute bottom-space-xs inset-x-space-xs flex flex-col gap-1">
+<h5 class="font-headline-sm text-headline-sm text-on-primary truncate">Bioluminescent</h5>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+              Deep Ocean
+            </span>
+<button aria-label="Favorite" class="w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-secondary flex items-center justify-center shadow-md active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Extra full-span card: Mystical Pine Forests -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container group shadow-sm mt-gutter-sm transition-transform active:scale-[0.99] cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dense atmospheric ancient evergreen pine forest engulfed in swirling morning mist with golden volumetric sunbeams piercing the canopy, lush emerald moss floor, cinematic depth wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCtoTbhw5Jp9yzulgTmN-dHYUVQYsIqVeNAu_BaD628kIf9usiak8nnZaB-6j3HjvPbw4pcJujcIbxcYvMMV6A7r75SrtldMBTMCIhD5h8Ga7_peFczBQYbkK27dvQFu5TWnx6yNmnpQ6cQY5GuZOBIxePoASh490qPdWb05rHFHe2sH-fv3LpqvBeVPkX2NFjYx9mmtCQH-YlxqQUxe9_WFnyvu8DrTj6WROhKeM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent"></div>
+<span class="absolute top-space-xs left-space-xs px-2 py-0.5 rounded-md bg-inverse-surface/60 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+        4K Panorama
+      </span>
+<div class="absolute bottom-space-sm inset-x-space-md flex items-end justify-between">
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-primary">Mystical Pine Forests</h5>
+<p class="font-body-sm text-body-sm text-on-primary/80">Volumetric sunbeams through emerald moss canopy</p>
+</div>
+<button class="h-8 px-3 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary-container font-label-sm text-label-sm flex items-center gap-1 shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+          Save
+        </button>
+</div>
+</div>
+<!-- Load More Wallpapers Button -->
+<div class="flex justify-center mt-space-md">
+<button class="w-full h-12 rounded-full bg-primary-fixed text-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-primary hover:text-on-primary transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+        Load more collections
+      </button>
+</div>
+</section>
+<!-- Trending AI Prompts Section -->
+<section class="flex flex-col pt-space-xl px-margin-sm pb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Trending AI Prompts</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+          842
+        </span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-0.5 transition-colors" href="#">
+        More
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- AI Prompt Interactive List Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Prompt 1: Biomechanical Lotus Garden -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Intricate biomechanical lotus flower with iridescent chrome metallic petals and glowing electric wires floating in a calm obsidian pool under a neon moon, AI render." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB80CQOrR_nSzhrQwvn0-eW2hONM-vYmmv1qtcCrEdrs-MzLNeC78hMH1GQiN6rMI7OtYDd4jt8uhod8iMlV2RCTXgwp5OV-HZsc6WSa9L1tSEopwHGmJ6B-E-eZPysVhVmdaZoviAxVoMsYSiDhWVjqcGWEErv7UfIuAxYwVzN4MpkJOrnwsvjNFRqP-BSyztoEL6a6yJ2-dW8W5gaFwy82sSjzWRGs-6ULwoh4tA"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Biomechanical Lotus Garden</h5>
+<span class="font-body-sm text-body-sm text-outline">Midjourney v6</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            "chrome lotus petals, iridescent fiber optics, obsidian reflective pool..."
+          </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">--ar 9:16</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">--v 6.0</span>
+</div>
+</div>
+<button aria-label="Copy Prompt" class="w-10 h-10 rounded-full bg-surface-container-low flex-shrink-0 flex items-center justify-center text-outline hover:bg-primary-fixed hover:text-primary transition-colors" onclick="this.classList.add('text-tertiary-container'); this.querySelector('span').innerText='done'; setTimeout(() =&gt; { this.classList.remove('text-tertiary-container'); this.querySelector('span').innerText='content_copy'; }, 2000);" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Prompt 2: Floating Steampunk Citadel -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Colossal floating steampunk island castle powered by massive spinning brass clockwork gears and steam vents drifting above golden cumulus sunset clouds, photorealistic concept art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKNLLndzj9FfOsz7BUw8e3RsS3hDpYNdztHq9XvF4z5Q20ocgBvuUTdktCaCfgnOJFfPgOQRbedrf_p7NdL-_vjVmTBCR89TyUM9csUQO0hotuQ9Tvm4PkC9xPrZUSYEUFUr40iqZkGfR2AtaBuidVACSm175iPs2Xe_G82OTrUn2jfBHPGkq-RjgSCEWNKPNIE1ZJ5RKbN2IHl689ah94itIjasP3o9rvY3B-17c"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Floating Steampunk Citadel</h5>
+<span class="font-body-sm text-body-sm text-outline">DALL·E 3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            "brass gears, massive flying castle, copper chimneys billowing warm steam..."
+          </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">4K UHD</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Isometric</span>
+</div>
+</div>
+<button aria-label="Copy Prompt" class="w-10 h-10 rounded-full bg-surface-container-low flex-shrink-0 flex items-center justify-center text-outline hover:bg-primary-fixed hover:text-primary transition-colors" onclick="this.classList.add('text-tertiary-container'); this.querySelector('span').innerText='done'; setTimeout(() =&gt; { this.classList.remove('text-tertiary-container'); this.querySelector('span').innerText='content_copy'; }, 2000);" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Prompt 3: Crystal Dragon in Nebula -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Majestic ethereal dragon sculptured from prismatic translucent quartz crystals coiled within a swirling deep cosmic violet nebula surrounded by sparkling stardust particles, 3D masterpiece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfV0AylomylVdzenv2oYPbywEFCYLdclgJjDGKCn2m0IQ9b4IUB4eT_MfN7gcxBJW7uT0bg9IJwY_-0grV_Jw4tBdwI_OfRYrdYWDtUZ4XDN6mPQz1STv8TJI8iWY6N1nsXdBqDPGb1QR3BxfQ6zsTowun73eO9eJFKaCKq1lZepU1C2w2VyVTMl1-1g0CYPSx6nhnBmFQrCz_ipaPgY2M17p5Y5V6r7pX0jWUrQQ"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Crystal Dragon in Nebula</h5>
+<span class="font-body-sm text-body-sm text-outline">Midjourney v6</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            "prismatic translucent amethyst dragon, deep cosmic starlight, refraction..."
+          </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">--stylize 750</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">--q 2</span>
+</div>
+</div>
+<button aria-label="Copy Prompt" class="w-10 h-10 rounded-full bg-surface-container-low flex-shrink-0 flex items-center justify-center text-outline hover:bg-primary-fixed hover:text-primary transition-colors" onclick="this.classList.add('text-tertiary-container'); this.querySelector('span').innerText='done'; setTimeout(() =&gt; { this.classList.remove('text-tertiary-container'); this.querySelector('span').innerText='content_copy'; }, 2000);" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Prompt 4: Holographic Geisha Portrait -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sci-fi cyberpunk portrait of a holographic traditional geisha with translucent cyan neon glitch effects, cherry blossom circuits, cinematic dark studio lighting, portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF-fPP5g1tHsq5tqKj1Z8smj7Ng68vM-dUfzCCMBP9gi2sdW0Jow-RT1uzcoDdCh0maPZo0Og6rMxW91YXYrAyxNfsHYrfKD8dfhpFfPMnVxpGgpNSfe_XPm_QXIjRykNJ12f4oiRrwtYlOhWDq-sQnzqgahRT8wGhBHOhHWddgORBmE5R8NbV36i5dhl9tvbVa7GwXtzP-Egga6Y0gBPL3yEb1hriYd_s8FSWcx0"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Holographic Geisha</h5>
+<span class="font-body-sm text-body-sm text-outline">Stable Diffusion XL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            "cyberpunk geisha, chromatic aberration, wireframe kimono, octane render..."
+          </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Portrait 8k</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Hi-Res</span>
+</div>
+</div>
+<button aria-label="Copy Prompt" class="w-10 h-10 rounded-full bg-surface-container-low flex-shrink-0 flex items-center justify-center text-outline hover:bg-primary-fixed hover:text-primary transition-colors" onclick="this.classList.add('text-tertiary-container'); this.querySelector('span').innerText='done'; setTimeout(() =&gt; { this.classList.remove('text-tertiary-container'); this.querySelector('span').innerText='content_copy'; }, 2000);" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Prompt 5: Surreal Desert Monolith -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Endless terracotta sand dunes beneath an orange twilight sky featuring an impossible mirror-surfaced alien obsidian monolith reflecting a twin sun, ultra-high resolution sci-fi wallpaper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpL6Mr5-2ivu061MdG-lxoywENOC-38RBiFNYTyvKKZJJyPNDcSRWx0hZ10iCAOHgI449Qwpf4hhf56wMengVyh1f51SGQxd_iwmkO42ueG_q5Qz8pfh3vvImhMSvpnvcE86hCbLXqtlksaqr9cy9XbZ5LAvD69sava5812oGIdFvdybfICk5aiktn5JQNjCC32I8_tDNMktMpC-ZJZmJda7maN0SZNw-FJ3EWedE"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">Surreal Desert Monolith</h5>
+<span class="font-body-sm text-body-sm text-outline">Midjourney v6</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+            "terracotta sand dunes, dark obsidian mirror monolith, twin sunset, cinematic..."
+          </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">--ar 9:19.5</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Cinematic</span>
+</div>
+</div>
+<button aria-label="Copy Prompt" class="w-10 h-10 rounded-full bg-surface-container-low flex-shrink-0 flex items-center justify-center text-outline hover:bg-primary-fixed hover:text-primary transition-colors" onclick="this.classList.add('text-tertiary-container'); this.querySelector('span').innerText='done'; setTimeout(() =&gt; { this.classList.remove('text-tertiary-container'); this.querySelector('span').innerText='content_copy'; }, 2000);" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Load More Prompts Button -->
+<div class="flex justify-center mt-space-md">
+<button class="w-full h-12 rounded-full bg-surface-container-low text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-surface-variant transition-colors active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+        Load more AI prompts
+      </button>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive filter chip selection
+  document.querySelectorAll('button[type="button"]').forEach(btn => {
+    if (btn.closest('.flex.gap-space-xs') && !btn.classList.contains('bg-primary-container')) {
+      btn.addEventListener('click', function() {
+        const siblings = this.parentElement.querySelectorAll('button');
+        siblings.forEach(s => {
+          s.className = "flex-shrink-0 h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant transition-colors active:scale-95";
+        });
+        this.className = "flex-shrink-0 h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_12px_rgba(107,77,247,0.25)] flex items-center gap-1.5 transition-transform active:scale-95";
+      });
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="[&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors [&amp;_.tab-indicator]:bg-primary-container [&amp;_.tab-indicator]:text-on-primary [&amp;_.tab-label]:text-primary-container [&amp;_.tab-label]:font-label-md" data-path="discover" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Discover</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="categories" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">grid_view</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Categories</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="generator" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bolt</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Generator</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="saved" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">bookmark</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Saved</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 gap-1 text-on-surface-variant hover:text-primary-container transition-colors" data-path="profile" href="#"><div class="tab-indicator w-12 h-7 rounded-full flex items-center justify-center transition-all bg-transparent"><span class="material-symbols-outlined text-[22px]">person</span></div><span class="tab-label font-label-sm text-label-sm leading-none transition-colors">Profile</span></a></div></nav></body></html>
