@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WallCraft — Stitch UI Design System & Screen Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #0B0C10;
+      --bg-surface: #111319;
+      --bg-card: #171922;
+      --bg-card-hover: #1D212D;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: #7C5CFC;
+      --brand-primary: #7C5CFC;
+      --brand-primary-hover: #9074FD;
+      --brand-teal: #2DD4BF;
+      --brand-amber: #FBBF24;
+      --brand-rose: #FB7185;
+      --text-main: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Top Nav Bar */
+    header {
+      background: rgba(17, 19, 25, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-teal));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 18px rgba(124, 92, 252, 0.4);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .brand-tag {
+      font-size: 0.68rem;
+      color: var(--brand-teal);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-top {
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--brand-primary);
+      color: #fff;
+      border: 1px solid var(--brand-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Container */
+    .app-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      gap: 24px;
+    }
+
+    @media (min-width: 1024px) {
+      .app-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    /* Left: Screen Library & Sidebar */
+    .sidebar {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px 16px 12px 40px;
+      color: #fff;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--border-focus);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: none;
+    }
+
+    .filter-chip {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-chip.active {
+      background: rgba(124, 92, 252, 0.2);
+      border-color: var(--brand-primary);
+      color: #fff;
+    }
+
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+      max-height: 78vh;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .screen-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+    }
+
+    .screen-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(124, 92, 252, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .screen-card.active {
+      background: rgba(124, 92, 252, 0.15);
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 20px rgba(124, 92, 252, 0.2);
+    }
+
+    .screen-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .screen-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .screen-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .screen-name {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .screen-cat {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      text-transform: capitalize;
+    }
+
+    /* Right: Interactive Device Preview Area */
+    .preview-container {
+      position: sticky;
+      top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .preview-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      gap: 10px;
+    }
+
+    .mode-switch {
+      display: flex;
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .mode-btn {
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .mode-btn.active {
+      background: var(--brand-primary);
+      color: #fff;
+    }
+
+    /* Device Mockup Shell */
+    .phone-frame {
+      width: 380px;
+      height: 780px;
+      background: #000;
+      border-radius: 46px;
+      padding: 12px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(124, 92, 252, 0.2), inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .phone-notch {
+      width: 120px;
+      height: 24px;
+      background: #000;
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 36px;
+      overflow: hidden;
+      background: var(--bg-base);
+      position: relative;
+    }
+
+    .phone-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .phone-image-view {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand-group">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-title">WallCraft Stitch Studio</div>
+        <div class="brand-tag">48 Screen Design System & Mockups</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="http://127.0.0.1:5173" target="_blank" class="btn-top btn-secondary" title="Switch to React Live App">
+        📱 React App (:5173)
+      </a>
+      <a href="./wallcraft_dark_mode_ui_ux_color_system.md" target="_blank" class="btn-top btn-secondary">
+        🎨 Design Tokens
+      </a>
+      <a href="https://github.com/shazamanbutt786-code/stitch-wallcraft-wallpaper-app" target="_blank" class="btn-top btn-primary">
+        GitHub Repo ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="app-container">
+    
+    <!-- Left: Screen Selection Library -->
+    <div class="sidebar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search 48 screens (e.g. discover, ai, lock screen, preview)...">
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-chip active" data-category="all">All (48)</button>
+        <button class="filter-chip" data-category="core">Core Flow</button>
+        <button class="filter-chip" data-category="wallpaper">Wallpaper & Lock</button>
+        <button class="filter-chip" data-category="ai">AI Studio</button>
+        <button class="filter-chip" data-category="gamification">Rewards & VIP</button>
+        <button class="filter-chip" data-category="account">Account & Auth</button>
+        <button class="filter-chip" data-category="branding">Icons & Brand</button>
+      </div>
+
+      <div class="screens-grid" id="screensList">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Right: Interactive Device Preview Area -->
+    <div class="preview-container">
+      <div class="preview-controls">
+        <div style="font-size: 0.8rem; font-weight: 700; color: #fff;" id="activeScreenTitle">
+          Discover Feed
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div class="mode-switch">
+            <button class="mode-btn active" id="btnModeHtml">Interactive HTML</button>
+            <button class="mode-btn" id="btnModePng">Device PNG</button>
+          </div>
+          <button id="btnOpenFull" class="btn-top btn-secondary" style="padding: 4px 10px; font-size: 0.72rem;">
+            ⤢ Full
+          </button>
+        </div>
+      </div>
+
+      <!-- Smartphone Frame -->
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <iframe id="previewIframe" class="phone-iframe" src="./discover/code.html"></iframe>
+          <img id="previewImage" class="phone-image-view" src="./discover/screen.png" alt="Screen Mockup">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const SCREENS = [
+      // Core Flow
+      { id: 'discover', name: 'Discover Feed', cat: 'core', icon: '✨', path: './discover' },
+      { id: 'categories', name: 'Explore Categories', cat: 'core', icon: '🗂️', path: './categories' },
+      { id: 'search_results', name: 'Search & Color Palette', cat: 'core', icon: '🔍', path: './search_results' },
+      { id: 'saved_items', name: 'Saved Favorites', cat: 'core', icon: '❤️', path: './saved_items' },
+      { id: 'notifications', name: 'Notifications Feed', cat: 'core', icon: '🔔', path: './notifications' },
+      { id: 'notifications_empty_state', name: 'Empty Notifications', cat: 'core', icon: '🔕', path: './notifications_empty_state' },
+      { id: 'search_error_timeout', name: 'Search Timeout Error', cat: 'core', icon: '⚠️', path: './search_error_timeout' },
+      { id: 'search_no_results_404', name: 'Search 404 No Results', cat: 'core', icon: '🔎', path: './search_no_results_404' },
+      { id: 'search_no_results_404_dark_mode', name: 'Search 404 Dark Mode', cat: 'core', icon: '🌑', path: './search_no_results_404_dark_mode' },
+
+      // Wallpaper Setup
+      { id: 'wallpaper_preview', name: 'Wallpaper Preview', cat: 'wallpaper', icon: '🖼️', path: './wallpaper_preview' },
+      { id: 'customize_lock_screen', name: 'Lock Screen Customizer', cat: 'wallpaper', icon: '📱', path: './customize_lock_screen' },
+      { id: 'crop_position_wallpaper', name: 'Crop & Position Wallpaper', cat: 'wallpaper', icon: '✂️', path: './crop_position_wallpaper' },
+      { id: 'set_wallpaper', name: 'Apply Wallpaper Dialog', cat: 'wallpaper', icon: '⚡', path: './set_wallpaper' },
+      { id: 'set_home_screen_wallpaper', name: 'Set Home Screen', cat: 'wallpaper', icon: '🏠', path: './set_home_screen_wallpaper' },
+      { id: 'wallpaper_applied_successfully', name: 'Wallpaper Applied Toast', cat: 'wallpaper', icon: '✅', path: './wallpaper_applied_successfully' },
+
+      // AI Studio
+      { id: 'ai_generator', name: 'AI Wallpaper Studio', cat: 'ai', icon: '🤖', path: './ai_generator' },
+      { id: 'ai_wallpaper_generation_in_progress', name: 'AI Latent Space Synthesis', cat: 'ai', icon: '🧬', path: './ai_wallpaper_generation_in_progress' },
+      { id: 'in_progress_futuristic_neon_cyberpunk_crystalline_portal_wallpaper_generating', name: 'AI Cyberpunk Rendering', cat: 'ai', icon: '⚡', path: './in_progress_futuristic_neon_cyberpunk_crystalline_portal_wallpaper_generating' },
+
+      // Gamification
+      { id: 'daily_check_in', name: '7-Day Check-in Streak', cat: 'gamification', icon: '🔥', path: './daily_check_in' },
+      { id: 'subscription_plans', name: 'VIP Pass & Subscriptions', cat: 'gamification', icon: '👑', path: './subscription_plans' },
+      { id: 'pause_subscription', name: 'Pause Subscription', cat: 'gamification', icon: '⏸️', path: './pause_subscription' },
+      { id: 'subscription_paused', name: 'Subscription Paused Screen', cat: 'gamification', icon: '⏳', path: './subscription_paused' },
+
+      // Account & Auth
+      { id: 'profile', name: 'Creator Profile', cat: 'account', icon: '👤', path: './profile' },
+      { id: 'edit_profile', name: 'Edit Profile & Bio', cat: 'account', icon: '✏️', path: './edit_profile' },
+      { id: 'sign_in', name: 'Sign In Screen', cat: 'account', icon: '🔑', path: './sign_in' },
+      { id: 'create_account', name: 'Create Free Account', cat: 'account', icon: '📝', path: './create_account' },
+      { id: 'reset_password', name: 'Reset Password', cat: 'account', icon: '🔒', path: './reset_password' },
+      { id: 'set_new_password', name: 'Set New Password', cat: 'account', icon: '🛡️', path: './set_new_password' },
+      { id: 'password_updated', name: 'Password Updated Notice', cat: 'account', icon: '🎉', path: './password_updated' },
+      { id: 'log_out_confirmation', name: 'Log Out Confirmation', cat: 'account', icon: '🚪', path: './log_out_confirmation' },
+      { id: 'delete_account', name: 'Delete Account Confirmation', cat: 'account', icon: '🗑️', path: './delete_account' },
+      { id: 'account_deleted_logged_out', name: 'Account Deleted Screen', cat: 'account', icon: '👋', path: './account_deleted_logged_out' },
+
+      // Brand & Icons
+      { id: 'splash_screen_wallcraft', name: 'WallCraft Splash Screen', cat: 'branding', icon: '✨', path: './splash_screen_wallcraft' },
+      { id: 'splash_screen_wallcraft_cosmic_prism_edition', name: 'Cosmic Prism Splash', cat: 'branding', icon: '🌌', path: './splash_screen_wallcraft_cosmic_prism_edition' },
+      { id: 'splash_screen_wallcraft_kinetic_portal_variant', name: 'Kinetic Portal Splash', cat: 'branding', icon: '🌀', path: './splash_screen_wallcraft_kinetic_portal_variant' },
+      { id: 'wallcraft_crystal_logo', name: 'Crystal Vector Logo', cat: 'branding', icon: '💎', path: './wallcraft_crystal_logo' },
+      { id: 'wallcraft_dark_theme_logo', name: 'Dark Theme Logo', cat: 'branding', icon: '🖤', path: './wallcraft_dark_theme_logo' },
+      { id: 'wallcraft_dark_app_icon_1_1', name: 'Dark App Icon', cat: 'branding', icon: '⬛', path: './wallcraft_dark_app_icon_1_1' },
+      { id: 'wallcraft_app_icon_emerald_edition', name: 'Emerald App Icon', cat: 'branding', icon: '🟢', path: './wallcraft_app_icon_emerald_edition' },
+      { id: 'wallcraft_app_icon_ruby_crimson_edition', name: 'Ruby Crimson Icon', cat: 'branding', icon: '🔴', path: './wallcraft_app_icon_ruby_crimson_edition' },
+      { id: 'wallcraft_app_icon_sapphire_edition', name: 'Sapphire Blue Icon', cat: 'branding', icon: '🔵', path: './wallcraft_app_icon_sapphire_edition' },
+      { id: 'wallcraft_app_icon_solar_amber_edition', name: 'Solar Amber Icon', cat: 'branding', icon: '🟡', path: './wallcraft_app_icon_solar_amber_edition' },
+      { id: 'animated_svg_1', name: 'Animated Vector Effect 1', cat: 'branding', icon: '💫', path: './animated_svg_1' },
+      { id: 'animated_svg_2', name: 'Animated Vector Effect 2', cat: 'branding', icon: '💫', path: './animated_svg_2' }
+    ];
+
+    let currentScreen = SCREENS[0];
+    let currentMode = 'html'; // 'html' or 'png'
+    let currentCategory = 'all';
+
+    const screensList = document.getElementById('screensList');
+    const previewIframe = document.getElementById('previewIframe');
+    const previewImage = document.getElementById('previewImage');
+    const activeScreenTitle = document.getElementById('activeScreenTitle');
+    const searchInput = document.getElementById('searchInput');
+    const btnModeHtml = document.getElementById('btnModeHtml');
+    const btnModePng = document.getElementById('btnModePng');
+    const btnOpenFull = document.getElementById('btnOpenFull');
+
+    function renderScreens() {
+      const q = searchInput.value.toLowerCase().trim();
+      screensList.innerHTML = '';
+
+      const filtered = SCREENS.filter(s => {
+        const matchesCat = currentCategory === 'all' || s.cat === currentCategory;
+        const matchesQuery = !q || s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q);
+        return matchesCat && matchesQuery;
+      });
+
+      filtered.forEach(s => {
+        const card = document.createElement('div');
+        card.className = `screen-card ${s.id === currentScreen.id ? 'active' : ''}`;
+        card.innerHTML = `
+          <div class="screen-icon">
+            <img src="${s.path}/screen.png" onerror="this.outerHTML='<span>${s.icon}</span>'" alt="${s.name}">
+          </div>
+          <div class="screen-info">
+            <div class="screen-name">${s.name}</div>
+            <div class="screen-cat">${s.cat}</div>
+          </div>
+        `;
+        card.onclick = () => selectScreen(s);
+        screensList.appendChild(card);
+      });
+    }
+
+    function selectScreen(s) {
+      currentScreen = s;
+      activeScreenTitle.textContent = s.name;
+      previewIframe.src = `${s.path}/code.html`;
+      previewImage.src = `${s.path}/screen.png`;
+      renderScreens();
+    }
+
+    btnModeHtml.onclick = () => {
+      currentMode = 'html';
+      btnModeHtml.classList.add('active');
+      btnModePng.classList.remove('active');
+      previewIframe.style.display = 'block';
+      previewImage.style.display = 'none';
+    };
+
+    btnModePng.onclick = () => {
+      currentMode = 'png';
+      btnModePng.classList.add('active');
+      btnModeHtml.classList.remove('active');
+      previewIframe.style.display = 'none';
+      previewImage.style.display = 'block';
+    };
+
+    btnOpenFull.onclick = () => {
+      const url = currentMode === 'html' ? `${currentScreen.path}/code.html` : `${currentScreen.path}/screen.png`;
+      window.open(url, '_blank');
+    };
+
+    document.querySelectorAll('.filter-chip').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-category');
+        renderScreens();
+      };
+    });
+
+    searchInput.oninput = () => renderScreens();
+
+    // Initial render
+    renderScreens();
+  </script>
+</body>
+</html>
